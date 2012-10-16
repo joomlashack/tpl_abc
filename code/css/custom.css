@@ -1,0 +1,10 @@
+/*some styles for the demo*/
+@import url('docs.css');
+
+dt.homeboy {
+font-size: 20px;
+}
+
+dd.homer {
+margin-left: 20px;
+}

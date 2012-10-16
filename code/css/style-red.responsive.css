@@ -1,0 +1,6 @@
+@media (max-width: 979px){
+	#toolbar .nav-collapse .nav > li > a, 
+	#toolbar .nav-collapse .dropdown-menu a{
+		color: white;
+	}
+}
