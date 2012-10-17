@@ -1,5 +1,8 @@
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/css?family=Quicksand);
+body{
+	overflow-x: hidden;
+}
 /************* Header *******************************************************/
 #header{
 	background-color:#D03535;
@@ -43,22 +46,25 @@
 	-o-box-sizing:border-box;
 	box-sizing: border-box;
 }*/
-nav#menu{
+nav#menu,
+nav#bottom-menu{
 	margin: 0;
 }
 /************************* Logo **********************************************/
 #logo{
 	text-align: center;
 	margin: 0 auto;
-	float: none;
 }
 /******************************* menu ************************************************/
-.navbar-inner{
-	border-radius: 0 0 0 0;
-	border: 0 none;
-	box-shadow: 0 0 ;
-	padding-left: 0;
-	padding-right:0;
+.navbar-inner {
+border-radius: 0 0 0 0;
+border: 0 none;
+box-shadow: 0 0;
+padding-left: 0;
+padding-right: 0;
+border-bottom: 1px solid #999;
+margin-left: -20px;
+margin-right: -20px;
 }
 .navbar{
 	margin-bottom: 0;
@@ -66,17 +72,25 @@ nav#menu{
 /**************************** link  ***********************************************/
 /****** menu ******/
 .navbar .nav{
-	margin: 0;
+margin: 0 auto;
+left: auto;
+float: none;
+display: table;
+
 }
 .wrapper-bottom-menu{
 	background-color:#D03535;
 }
 
-#nav-menu.nav-collapse {
-    display: table;
-    margin: 0 auto;
-    padding-left: 20px;
+#nav-menu.nav-collapse,
+#nav-bottom-menu.nav-collapse {
+padding-left: 20px;
+border-left: 1px solid #999;
+margin-left: 9px;
+border-right: 1px solid #999;
+margin-right: 9px;
 }
+
 .navbar .nav > li > a,
 .navbar .nav > li > span{
 	padding: 10px 5px;
@@ -86,12 +100,29 @@ nav#menu{
 	color:white;
 	margin-right: 20px;
 }
+#bottom-menu li{
+	
+	display: table;
+}
 #menu li:last-child,#bottom-menu li:last-child{
 	margin-right:0;
+	
 }
 #menu li .caret, #bottom-menu li .caret{
 	display: none;
 }
+#menu .dropdown-menu ,
+#bottom-menu .dropdown-menu {
+	border: 1px solid #999;
+	padding: 0;
+}
+#menu .dropdown-menu li,
+#bottom-menu .dropdown-menu li{
+	border-top: 1px solid #999;
+	margin-right: 0;
+	margin-top: -1px;
+	}
+
 .dropdown-menu .dropdown-menu  a,
 .dropdown-menu .dropdown-menu  span{
 	font-size: 13px;
@@ -176,8 +207,16 @@ nav#menu{
 }
 /****  Toolbar *****************************************************************************/
 #nav-toolbar.nav-collapse {
-    display: table;
-    margin: 0 auto;
+	margin-left: -20px;
+	margin-right: -20px;
+	border-bottom: 1px solid;
+
+}
+#toolbar .navbar .nav {
+	margin: 0 auto;
+	left: auto;
+	float: none;
+	display: table;
 }
 .navbar-inverse .navbar-inner{
 	background-image: none;
@@ -283,6 +322,7 @@ dl.article-info{
 #footer{
 	background-color: #71D1E3;
 	background-image: none;
+	border:0 none;
 	filter: none;
 }
 #footer .container{
@@ -510,7 +550,6 @@ aside .moduletext_ms1,
 .moduletext_ms1 h3
 {
 	text-transform: uppercase;
-	font-weight: bold;
 	padding: 0 20px;
 }
 
@@ -582,11 +621,7 @@ aside .moduletext_ms1,
 	color: white;
 	font-family: 'Quicksand';
 }
-.module_ms2 h3,
-.moduletext_ms2 h3,
-.moduletable_ms2 h3{
-	font-weight: bold;
-}
+
 .module_ms2.red h3,
 .moduletext_ms2.red h3,
 .moduletable_ms2.red h3{
@@ -646,7 +681,6 @@ aside .moduletext_ms1,
 	color: #666;
 	text-transform: uppercase;
 	font-size: 14px;
-	font-weight: bold;
 }
 
 .moduletable_ms3.green h3,
@@ -681,17 +715,7 @@ aside .moduletext_ms1,
 	margin-top: 20px;
 }
 
-#bottom-menu .navbar-inner{
-	background-color:#D03535;
-	background-image:none;
-	border:0 none;
-	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.065);
-	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.065);
-	box-shadow:0 1px 4px rgba(0, 0, 0, 0.065);*zoom:1;
-	display:table;
-	margin: auto;
-	white-space: nowrap;
-}
+
 #bottom-menu .nav-collapse .nav > li > a{
 	color: white;
 }
@@ -792,7 +816,6 @@ p::-moz-selection{
 #top{
 	margin: 0 auto;
 	text-align: center;
-	float: none;
 }
 #top h1,
 #top h2,
@@ -838,14 +861,14 @@ div.module div.moduletable div.custom ul.latestnews.nav li a {
 }
 /************************ styles of modules ****************************/
 
-.custom_ms2 > i,
-.custom_ms2 > h2{
+.custom_ms2 i,
+.custom_ms2 h2{
 	float: left;
 	line-height: normal;
 	margin-bottom:0;
 	color: white;
+	padding:5px 0 0 5px;
 	text-transform:uppercase;
-	font-weight: bold;
 	opacity: 0.5;
 	filter: alpha(opacity = 50);
 	-ms-filter: alpha(opacity = 50);
@@ -959,11 +982,32 @@ li{
 	overflow: hidden;
 }
 #grid-top{
-	outline: 1px solid #999;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	position: relative;
 }
-
+.grid-top{
+	padding: 10px 0;
+}
+.border-wrapp{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.border-wrapp-relative{
+	position: relative;
+	margin: 0 auto;
+	width: 98%;
+	height:100%;
+}
+.border-gridtop{
+	position: absolute;
+	outline: 1px solid #999;
+	height: 100%;
+	width: 100%;
+}
+#grid-top div.padding,
+.padding{
+	padding: 0 20px;
+} 
 #grid-top .moduletable, 
 #grid-top .moduletable_ms1, 
 #grid-top .moduletable_ms2, 
@@ -1002,7 +1046,13 @@ li{
 #breadcrumbs span{
 	text-shadow: 0 0 1px;	
 }
-
+#footer {
+	color: white;
+}
+#footer .menu li {
+	float: left;
+	margin-left: 10px;
+}
 /******** for wright ***************/
 .img-polaroid{
 	-webkit-box-sizing: border-box;
@@ -1010,4 +1060,7 @@ li{
 	-ms-box-sizing:border-box;
 	-o-box-sizing:border-box;
 	box-sizing: border-box;
+}
+.hide-text{
+	display: none;
 }
