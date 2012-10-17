@@ -32,9 +32,6 @@ $theme = JRequest::getVar('templateTheme',$user->getParam('theme',$this->params-
 <html>
 <head>
 	<w:head />
-	<?php if ($this->document->params->get('responsive',1)): ?>
-		 <link href="<?php echo $this->baseurl;?>/templates/<?php echo $this->document->template;?>/css/responsive.css" rel="stylesheet" type="text/css" media="screen" />
-	<?php endif; ?>
 </head>
 <body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass?>"<?php endif; ?>>
  
@@ -50,10 +47,9 @@ $theme = JRequest::getVar('templateTheme',$user->getParam('theme',$this->params-
    <!-- header -->
    		 <header id="header">
    		 	<div class="<?php echo $containerClass ?>">
-    		<div class="<?php echo $gridMode; ?> clearfix">
-    			<w:logo name="top" />
-    			<div class="clear"></div>
-    		</div>
+	    		<div class="<?php echo $gridMode; ?> clearfix">
+	    			<w:logo class="clearfix" name="top" />
+	    		</div>
     		</div>
    		 </header>
 	 <!-- featured -->
@@ -71,6 +67,12 @@ $theme = JRequest::getVar('templateTheme',$user->getParam('theme',$this->params-
        <!-- grid-top -->
         <?php if ($this->countModules('grid-top')) : ?>
         <div id="grid-top">
+        	<div class="border-wrapp">
+        		<div class="border-wrapp-relative">
+        			<div class="border-gridtop"></div>
+        		</div>	
+        	</div>
+        	
 			<div class="grid-top">
 				<w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />	
 			</div>
@@ -145,7 +147,7 @@ $theme = JRequest::getVar('templateTheme',$user->getParam('theme',$this->params-
 	    <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
 	    	<div class="<?php echo $containerClass ?>">
 	    	<?php if ($this->countModules('footer')) : ?>
-			<w:module type="<?php echo $gridMode; ?>" name="footer" chrome="xhtml" />
+			<w:module type="none" name="footer" chrome="xhtml" />
 			 <?php endif; ?>
 			<w:footer />
 			 </div>
