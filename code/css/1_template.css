@@ -267,9 +267,7 @@ dl.article-info{
     margin: 20px 0 10px;
     padding-bottom: 0;
 }
-.breadcrumbs .icon-caret-right:before{
-	content: ">";
-}
+
 .breadcrumbs a:hover,
 #main h1 a:hover,#main h2 a:hover,#main h3 a:hover,#main h4 a:hover,#main h5 a:hover,#main h6 a:hover{
 	text-decoration: none;
@@ -283,10 +281,12 @@ dl.article-info{
 	margin-right: 10px;
 }
 #footer{
-	padding-top: 10px;
 	background-color: #71D1E3;
 	background-image: none;
 	filter: none;
+}
+#footer .container{
+	padding-top: 10px;
 }
 #footer a{
 	color: white;
@@ -869,22 +869,23 @@ h4 a{
 .readmore a{
 	background-color: transparent;
 	background-image: url(../images/flag-red.png);
-	background-position:left center;
+	background-position:right center;
 	background-repeat:no-repeat;
 	filter: none;
 	-ms-filter:none;
 	border:0 none;
 	box-shadow: none;
-	padding-left: 30px;
+	padding-right: 30px;
 }
 .readmore a:hover{
 	background-color: transparent;
 	background-image: url(../images/flag-red.png);
-	background-position:2px center;
+	background-position:right center;
 	filter: none;
 	-ms-filter:none;
 	border:0 none;
 	box-shadow: none;
+	color: black;
 }
 .container{
 	border-left: 1px solid #999;
@@ -962,12 +963,7 @@ li{
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-.grid-top{
-	margin-right: -10px;
-}
-#grid-top .grid-top > .row{
-	margin-left: -20px;
-}
+
 #grid-top .moduletable, 
 #grid-top .moduletable_ms1, 
 #grid-top .moduletable_ms2, 
@@ -987,6 +983,26 @@ li{
 #grid-top .module{
 	padding: 0;
 } 
+#breadcrumbs{
+	font-family: 'Quicksand';
+}
+#breadcrumbs .icon-caret-right:before{
+	content:"";
+}
+#breadcrumbs a{
+	color:white;
+	background-color: #D03636;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-shadow: 0 0 1px;
+}
+#breadcrumbs a:hover{
+	text-shadow: 0 0 1px,0 0 1px;
+}
+#breadcrumbs span{
+	text-shadow: 0 0 1px;	
+}
+
 /******** for wright ***************/
 .img-polaroid{
 	-webkit-box-sizing: border-box;

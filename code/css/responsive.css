@@ -21,6 +21,19 @@
 	#toolbar, #header, #menu, #featured, #grid-top, #main-content, #above-content, #breadcrumbs, #grid-bottom, #grid-bottom2, #bottom-menu {
 		margin-bottom: 0;
 	}
+	.wrapper-menu,
+	#header{
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	.wrapper-menu .container{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.content-wrapp{
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 @media(max-width:1163px){
 	aside #mod-search-searchword{
@@ -29,10 +42,9 @@
 	}
 }
 @media (max-width: 979px){
-	#menu,
-	#bottom-menu{
-		margin-left: -20px;
-		margin-right: -20px;
+	
+	#bottom-menu .navbar-inner{
+		display: block;
 	}
 	#toolbar span.separator{
 	color: #fbfbfb;
@@ -44,9 +56,11 @@
 	#toolbar .container-fluid {
 		padding: 0
 	}
-	.navbar-inner{
-		border-left: 1px solid #ccc;
-		text-align: center;
+	
+	#toolbar .container,
+	.wrapper-menu .container,
+	#header .container{
+		border:0 none;
 	}
 	#menu .navbar .nav > li > a,
 	#bottom-menu .navbar .nav > li > a{
