@@ -29,6 +29,12 @@
 		margin-left: -20px;
 		margin-right: -20px;
 	}
+	.wrapper-container-featured{
+		margin-left: -20px;
+		margin-right: -20px;
+		width: auto;
+		
+	}
 	.wrapper-menu .container{
 		padding-left: 0;
 		padding-right: 0;
@@ -172,9 +178,9 @@
 	.custom_ms2 h2{
 		font-size: 1.5em;
 	}
-	
-	
-	
-	
+	.navbar-inner{
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
