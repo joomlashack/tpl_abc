@@ -9,6 +9,7 @@ body{
 	color: white;
 	margin-bottom: 0;
 }
+
 #header .container{
 	padding: 10px;
 }
@@ -604,7 +605,6 @@ aside .moduletext_ms1,
 .module_ms1 a:hover,
 .moduletext_ms1 a:hover{
 	color: #333;
-	color: #C5D77A;
 }
 /********************* ms2 ********************/
 .module_ms2{
@@ -761,9 +761,7 @@ aside .moduletext_ms1,
 	filter: none;
 	border-color: transparent;
 }
-#toolbar .navbar .btn-navbar .icon-bar{
-	background-color: #CC0000;
-}
+
 .navbar .btn-navbar .icon-bar{
 	width: 40px;
 }
