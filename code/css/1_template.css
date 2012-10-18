@@ -576,15 +576,15 @@ aside .moduletext_ms1,
 .moduletext_ms1.red h3{
 	background-color:#D03636;
 }
-/********* Orange ms1 *************/
-.moduletable_ms1.orange a,
-.module_ms1.orange a,
-.moduletext_ms1.orange a{
+/********* Yellow ms1 *************/
+.moduletable_ms1.yellow a,
+.module_ms1.yellow a,
+.moduletext_ms1.yellow a{
 	color: #FFA801;
 }
-.module_ms1.orange h3,
-.moduletable_ms1.orange h3,
-.moduletext_ms1.orange h3{
+.module_ms1.yellow h3,
+.moduletable_ms1.yellow h3,
+.moduletext_ms1.yellow h3{
 	background-color:#FFA801;
 	color: #FECA66;
 }
@@ -631,11 +631,11 @@ aside .moduletext_ms1,
 	opacity: 0.5;
 }
 
-/************ Orange **************/
+/************ Yellow **************/
 
-.module_ms2.orange,
-.moduletext_ms2.orange,
-.moduletable_ms2.orange{
+.module_ms2.yellow,
+.moduletext_ms2.yellow,
+.moduletable_ms2.yellow{
 	background-color: #FFA801;
 }
 /************ Green **************/
@@ -690,9 +690,9 @@ aside .moduletext_ms1,
 .moduletext_ms3.red h3{
 	color:#D03636;	
 }
-.moduletable_ms3.orange h3,
-.module_ms3.orange h3,
-.moduletext_ms3.orange h3{
+.moduletable_ms3.yellow h3,
+.module_ms3.yellow h3,
+.moduletext_ms3.yellow h3{
 	color:#FFA600;	
 }
 .moduletable_ms3.blue h3,
@@ -850,7 +850,7 @@ div.module div.moduletable div.custom ul.latestnews.nav li a {
 .margin-none{
 	margin: 0;
 }
-.color-orange{
+.color-yellow {
 	color: #FFA600;
 }
 /************************ styles of modules ****************************/
