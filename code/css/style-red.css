@@ -27,3 +27,10 @@
 .wrapper-container-featured .featured-background {
 	background-color: #D03535;
 }
+.navbar-inverse .btn-navbar:hover,
+.navbar-inverse .btn-navbar:active,
+.navbar-inverse .btn-navbar.active, 
+.navbar-inverse .btn-navbar.disabled, 
+.navbar-inverse .btn-navbar[disabled]{
+	background-color: #BF2C2C;
+}

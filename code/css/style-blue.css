@@ -43,3 +43,10 @@ background-image: url('../images/arrow-blue.png');
 .wrapper-container-featured .featured-background {
 	background-color: #13B2D2;
 }
+.navbar-inverse .btn-navbar:hover,
+.navbar-inverse .btn-navbar:active,
+.navbar-inverse .btn-navbar.active, 
+.navbar-inverse .btn-navbar.disabled, 
+.navbar-inverse .btn-navbar[disabled]{
+	background-color: #0F8AA3
+}

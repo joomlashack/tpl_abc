@@ -43,3 +43,10 @@
 .wrapper-container-featured .featured-background {
 	background-color: #FFA801;
 }
+.navbar-inverse .btn-navbar:hover,
+.navbar-inverse .btn-navbar:active,
+.navbar-inverse .btn-navbar.active, 
+.navbar-inverse .btn-navbar.disabled, 
+.navbar-inverse .btn-navbar[disabled]{
+	background-color: #E79800
+}
