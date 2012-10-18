@@ -132,15 +132,18 @@
 		border:0 none;
 	}
 	
-	#menu .dropdown-menu li, #bottom-menu .dropdown-menu li {
+	#menu .dropdown-menu li, #bottom-menu .dropdown-menu li, #nav-toolbar .dropdown-menu li {
 		border: 0;
 	}
 	
+	#nav-toolbar .navbar .nav > li > a,
 	#menu .navbar .nav > li > a,
 	#bottom-menu .navbar .nav > li > a,
 	.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a,
 	.navbar .nav > li > .dropdown-menu:after,
-	#menu .dropdown-menu, #bottom-menu .dropdown-menu {
+	#menu .dropdown-menu,
+	#bottom-menu .dropdown-menu,
+	#nav-toolbar .dropdown-menu {
 		border: 0;
 		color: #ffffff;
 	}

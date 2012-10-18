@@ -35,19 +35,9 @@ body{
 	-ms-box-sizing:border-box;
 	-o-box-sizing:border-box;
 	box-sizing: border-box;
-}/*
-#grid-top ,
-#grid-top2 ,
-#grid-bottom ,
-#grid-bottom2{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing:border-box;
-	-ms-box-sizing:border-box;
-	-o-box-sizing:border-box;
-	box-sizing: border-box;
-}*/
+}
 nav#menu,
-nav#bottom-menu{
+nav#bottom-menu {
 	margin: 0;
 }
 /************************* Logo **********************************************/
@@ -71,12 +61,15 @@ margin-right: -20px;
 } 
 /**************************** link  ***********************************************/
 /****** menu ******/
-.navbar .nav{
-margin: 0 auto;
-left: auto;
-float: none;
-display: table;
+.nav ul li {
+	font-family: 'Quicksand';
+}
 
+.navbar .nav{
+	margin: 0 auto;
+	left: auto;
+	float: none;
+	display: table;
 }
 .wrapper-bottom-menu{
 	background-color:#D03535;
@@ -84,12 +77,13 @@ display: table;
 
 #nav-menu.nav-collapse,
 #nav-bottom-menu.nav-collapse {
-padding-left: 20px;
-border-left: 1px solid #999;
-margin-left: 9px;
-border-right: 1px solid #999;
-margin-right: 9px;
+	padding-left: 20px;
+	border-left: 1px solid #999;
+	margin-left: 9px;
+	border-right: 1px solid #999;
+	margin-right: 9px;
 }
+
 
 .navbar .nav > li > a,
 .navbar .nav > li > span{
@@ -100,6 +94,7 @@ margin-right: 9px;
 	color:white;
 	margin-right: 20px;
 }
+
 #bottom-menu li{
 	
 	display: table;
@@ -108,23 +103,19 @@ margin-right: 9px;
 	margin-right:0;
 	
 }
-#menu li .caret, #bottom-menu li .caret{
-	display: none;
-}
-#nav-toolbar .dropdown-menu {
-	padding: 5px;
-}
+#nav-toolbar .dropdown-menu,
 #menu .dropdown-menu ,
 #bottom-menu .dropdown-menu {
 	border: 1px solid #999;
 	padding: 0;
 }
+#nav-toolbar .dropdown-menu li,
 #menu .dropdown-menu li,
 #bottom-menu .dropdown-menu li{
 	border-top: 1px solid #999;
 	margin-right: 0;
 	margin-top: -1px;
-	}
+}
 
 .dropdown-menu .dropdown-menu  a,
 .dropdown-menu .dropdown-menu  span{
@@ -139,7 +130,6 @@ margin-right: 9px;
 
 .navbar-inverse .brand, .navbar-inverse .nav > li > a{
 	color: white;
-	font-family:'Quicksand';
 	text-shadow: none;
 	font-size:16px;
 	padding: 10px 30px;
@@ -181,8 +171,9 @@ margin-right: 9px;
 .dropdown-menu span{
 	padding:4px 0;
 }
+#nav-toolbar .dropdown-menu li,
 #menu .dropdown-menu li,
-#bottom-menu .dropdown-menu li{
+#bottom-menu .dropdown-menu li {
 	padding-left: 10px;
 	padding-right: 10px;
 	list-style:none outside none;
@@ -565,7 +556,6 @@ aside .moduletext_ms1,
 	text-transform: uppercase;
 	padding: 0 20px;
 	color: #ffffff;
-	opacity: 0.5;
 }
 
 .module_ms1.blue h3,
@@ -596,6 +586,7 @@ aside .moduletext_ms1,
 .moduletable_ms1.orange h3,
 .moduletext_ms1.orange h3{
 	background-color:#FFA801;
+	color: #FECA66;
 }
 
 /********* Green ms1 *************/
@@ -613,6 +604,7 @@ aside .moduletext_ms1,
 .module_ms1 a:hover,
 .moduletext_ms1 a:hover{
 	color: #333;
+	color: #C5D77A;
 }
 /********************* ms2 ********************/
 .module_ms2{
@@ -892,6 +884,7 @@ h4 a{
 	color: #333;
 }
 .readmore a{
+	font-family: 'Quicksand';
 	background-color: transparent;
 	background-image: url(../images/flag-red.png);
 	background-position:right center;
