@@ -3,4 +3,11 @@
 	#toolbar .nav-collapse .dropdown-menu a{
 		color: white;
 	}
+
+	.nav-collapse .nav > li > a:hover,
+	.nav-collapse .dropdown-menu a:hover {
+		background-color: #bf2c2c
+	}
 }
+
+

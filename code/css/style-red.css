@@ -20,3 +20,10 @@
 #footer a:hover{
 	color: red;
 }
+.hero-unit h1 {
+	color: #E38686;
+}
+
+.wrapper-container-featured .featured-background {
+	background-color: #D03535;
+}

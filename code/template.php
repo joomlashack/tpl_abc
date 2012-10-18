@@ -54,14 +54,16 @@ $theme = JRequest::getVar('templateTheme',$user->getParam('theme',$this->params-
    		 </header>
 	 <!-- featured -->
     <?php if ($this->countModules('featured')) : ?>
+    <div class="wrapper-container-featured">
+    	<div class="featured-background"></div>
     	 <div class="<?php echo $containerClass ?> top-space ">
-     <div class="wrapper-featured">
-     	 <div id="featured">
-        <w:module type="<?php echo $gridMode; ?>" name="featured" chrome="wrightflexgrid" />
-  		  </div>
-
-     </div>
+		     <div class="wrapper-featured">
+		     	 <div id="featured">
+			        <w:module type="<?php echo $gridMode; ?>" name="featured" chrome="wrightflexgrid" />
+		  		  </div>
+		     </div>
        </div>
+    </div>
     <?php endif; ?>
          <div class="<?php echo $containerClass ?> top-space">
        <!-- grid-top -->

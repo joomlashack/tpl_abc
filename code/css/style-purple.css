@@ -1,0 +1,48 @@
+@charset "utf-8";
+/************************ Menu ********************/
+.wrapper-menu,
+.wrapper-bottom-menu,
+#header,
+.navbar-inverse .navbar-inner,
+#breadcrumbs a{
+	background-color: #4C0F7B;
+}
+.dropdown-menu{
+	background-color: #350B56;
+}
+.dropdown-menu li a,
+.dropdown-menu li span {
+	color: #fff;
+}
+.nav-collapse .dropdown-menu a:hover,
+.nav-collapse .dropdown-menu span:hover,
+.dropdown-menu .active > a, .dropdown-menu .active > a:hover{
+	color: #fff;
+	text-shadow: 0 0 0 #fff,0 0 0 #fff; 
+}
+
+#footer a:hover,
+#main #tabs h1 a, 
+#main #tabs h2 a, 
+#main #tabs h3 a, 
+#main #tabs h4 a, 
+#main #tabs h5 a, #main #tabs h6 a, 
+#main .tabs h1 a, #main .tabs h2 a, 
+#main .tabs h3 a, #main .tabs h4 a, 
+#main .tabs h5 a, #main .tabs h6 a{
+	color: #4C0F7B;
+}
+.hero-unit h1 {
+	color: #8257A3;
+}
+.readmore a,
+.readmore a:hover{
+background-image: url('../images/arrow-purple.png');
+}
+#footer{
+	background-color: #80D8D7;
+}
+
+.wrapper-container-featured .featured-background {
+	background-color: #4C0F7B;
+}
