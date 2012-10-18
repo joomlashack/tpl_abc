@@ -782,7 +782,7 @@ aside .moduletext_ms1,
 	clear: both;
 }
 #mod-search-searchword {
-    border: 2px solid #CDCDCD;
+    border: 2px solid #999;
     border-radius: 0 0 0 0;
     margin-bottom: 10px;
 }
