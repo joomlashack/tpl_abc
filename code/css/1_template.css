@@ -319,6 +319,22 @@ dl.article-info{
 	background-image: none;
 	border:0 none;
 	filter: none;
+	padding-bottom: 17px;
+	background-image: url(../images/border-bottom-footer.jpg);
+	background-repeat: repeat-x;
+	background-position: bottom left;
+}
+.wrapper-footer{
+	padding-top: 17px;
+}
+.border-closure-ft{
+	margin-left: -20px;
+	margin-right: -20px;
+	border-bottom: 1px solid #999;
+
+}
+#bottom-menu .navbar-inner{
+	border: 0 none;
 }
 #footer .container{
 	padding-top: 10px;
