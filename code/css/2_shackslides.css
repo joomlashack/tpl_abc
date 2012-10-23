@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+#sliderNav a.sliderPrev,
+#sliderNav a.sliderNext{
+	text-indent: -9999px;
+}
+#sliderNav a.sliderPrev{
+	background-image: url('../images/arrow-prev.png')!important;
+	background-position:center center !important;
+	background-repeat:no-repeat !important;
+}
+#sliderNav a.sliderNext{
+	background-image: url('../images/arrow-next.png') !important;
+	background-position:center center !important;
+	background-repeat:no-repeat !important;
+}
