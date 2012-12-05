@@ -800,7 +800,7 @@ aside .moduletext_ms1,
 #mod-search-searchword {
     border: 2px solid #999;
     border-radius: 0 0 0 0;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 .btn {
 	border-radius: 2px 2px 2px 2px !important;
