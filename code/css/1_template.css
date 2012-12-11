@@ -68,7 +68,10 @@ margin-right: -20px;
 	color: white;
 }
 
-
+#menu ul.nav.menu li:first-child,
+#bottom-menu ul.nav.menu li:first-child {
+list-style: none;
+}
 /**************************** link  ***********************************************/
 /****** menu ******/
 ul.nav li {
