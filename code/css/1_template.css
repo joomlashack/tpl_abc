@@ -409,10 +409,6 @@ aside .uneditable-input{
 	margin-top: 10px;
 }
 
-/*  .readmore:after{
-	content:" >>";
-}
-*/
 .moduletable ul.nav i,  
 .moduletext ul.nav i,  
 .module  ul.nav i{
@@ -425,6 +421,21 @@ aside .uneditable-input{
 .moduletext_ms2 ul.nav i, 
 .module_ms2 ul.nav i{
 	color: transparent;	
+}
+
+.moduletable_ms1 ul.nav i[class^="icon-"] , 
+.moduletext_ms1 ul.nav i[class^="icon-"], 
+.module_ms1 ul.nav i[class^="icon-"],
+.moduletable_ms2 ul.nav i[class^="icon-"], 
+.moduletext_ms2 ul.nav i[class^="icon-"], 
+.module_ms2 ul.nav i[class^="icon-"],
+.moduletable_ms1 ul.nav i[class*=" icon-"] , 
+.moduletext_ms1 ul.nav i[class*=" icon-"], 
+.module_ms1 ul.nav i[class*=" icon-"],
+.moduletable_ms2 ul.nav i[class*=" icon-"], 
+.moduletext_ms2 ul.nav i[class*=" icon-"], 
+.module_ms2 ul.nav i[class*=" icon-"] {
+	color: inherit;
 }
 .moduletable_ms1 .nav > li > a:hover,
 .moduletext_ms1 .nav > li > a:hover,
