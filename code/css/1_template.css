@@ -10,7 +10,7 @@ body{
 	margin-bottom: 0;
 }
 
-#header .container{
+#header > .container{
 	padding: 10px;
 }
 .top-space{
@@ -60,6 +60,15 @@ margin-right: -20px;
 .navbar{
 	margin-bottom: 0;
 } 
+
+.nav-pills > .active > a [class^="icon-"]:before,
+.nav-pills > .active > a:hover [class^="icon-"]:before,
+.nav-pills > .active > a [class*=" icon-"]:before,
+.nav-pills > .active > a:hover [class*=" icon-"]:before {
+	color: white;
+}
+
+
 /**************************** link  ***********************************************/
 /****** menu ******/
 ul.nav li {
@@ -582,6 +591,13 @@ aside .moduletext_ms1,
 	color: #71D1E4;
 	
 }
+
+.moduletable_ms1.blue .nav-pills > .active > a,
+.moduletable_ms1.blue .nav-pills > .active > a:hover {
+	background-color: #71D1E4;
+	color: white;
+}
+
 /********* Red ms1 *************/
 .moduletable_ms1.red a,
 .module_ms1.red a,
@@ -591,8 +607,16 @@ aside .moduletext_ms1,
 .module_ms1.red h3,
 .moduletable_ms1.red h3,
 .moduletext_ms1.red h3{
+	color: #E58584;
 	background-color:#D03636;
 }
+
+.moduletable_ms1.red .nav-pills > .active > a,
+.moduletable_ms1.red .nav-pills > .active > a:hover {
+	background-color: #E58584;
+	color: white;
+}
+
 /********* Yellow ms1 *************/
 .moduletable_ms1.yellow a,
 .module_ms1.yellow a,
@@ -606,6 +630,12 @@ aside .moduletext_ms1,
 	color: #FECA66;
 }
 
+.moduletable_ms1.yellow .nav-pills > .active > a,
+.moduletable_ms1.yellow .nav-pills > .active > a:hover {
+	background-color: #FECA66;
+	color: white;
+}
+
 /********* Green ms1 *************/
 .moduletable_ms1.green a,
 .module_ms1.green a,
@@ -616,11 +646,18 @@ aside .moduletext_ms1,
 .moduletable_ms1.green h3,
 .moduletext_ms1.green h3{
 	background-color:#9EBC20;
+	color: #C5D874;
 }
 .moduletable_ms1 a:hover,
 .module_ms1 a:hover,
 .moduletext_ms1 a:hover{
 	color: #333;
+}
+
+.moduletable_ms1.green .nav-pills > .active > a,
+.moduletable_ms1.green .nav-pills > .active > a:hover {
+	background-color: #C5D874;
+	color: white;
 }
 /********************* ms2 ********************/
 .module_ms2{
@@ -646,6 +683,7 @@ aside .moduletext_ms1,
 	color:#FFFFFF;
 	opacity: 0.5;
 }
+
 
 /************ Yellow **************/
 
@@ -919,7 +957,9 @@ h4 a{
 	box-shadow: none;
 	color: black;
 }
-.container{
+body > * > div.container,
+body > div.container,
+body footer > div.container {
 	border-left: 1px solid #999;
 	border-right:1px solid #999;
 	padding-left:10px;
@@ -1062,6 +1102,22 @@ li{
 	float: left;
 	margin-left: 10px;
 }
+
+/******** Other styles ***************/
+
+.well {
+	color: #666666;
+}
+.well a {
+	color: black;
+}
+
+#login-form a,
+#login-form a,
+#login-form a{
+	font-family: 'Arial';
+}
+
 /******** for wright ***************/
 .img-polaroid{
 	-webkit-box-sizing: border-box;

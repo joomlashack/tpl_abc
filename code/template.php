@@ -52,7 +52,13 @@ $theme = JRequest::getVar('templateTheme',$user->getParam('theme',$this->params-
 	<header id="header">
 		<div class="<?php echo $containerClass ?>">
 			<div class="<?php echo $gridMode; ?> clearfix">
-				<w:logo class="clearfix" name="top" />
+				<div class="span1"></div>
+				<div class="span10">
+					<div class="row-fluid">
+						<w:logo class="clearfix" name="top" />
+					</div>
+				</div>
+				<div class="span1"></div>
 			</div>
 		</div>
 	</header>
