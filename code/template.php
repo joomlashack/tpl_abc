@@ -162,12 +162,13 @@ $theme = JRequest::getVar('templateTheme',$user->getParam('theme',$this->params-
     	 
 	    <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
 	    	<div class="<?php echo $containerClass ?>">
-		    	<div class="border-closure-ft">
-			    	
-			    	<?php if ($this->countModules('footer')) : ?>
-					<w:module type="none" name="footer" chrome="xhtml" />
-					 <?php endif; ?>
-					<w:footer />
+		    	<div class="border-closure-ft">    	
+			    	<div class="footer-content">
+                        <?php if ($this->countModules('footer')) : ?>
+                             <w:module type="none" name="footer" chrome="xhtml" />
+                        <?php endif; ?>
+                        <w:footer />
+                    </div>
 		    	</div>
 			 </div>
 	    </footer>
