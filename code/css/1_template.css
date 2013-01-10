@@ -342,6 +342,7 @@ dl.article-info{
 .footer-content{
 	padding-left: 20px;
 	padding-right: 20px;
+	overflow: hidden;
 }
 .border-closure-ft{
 	margin-left: -20px;
@@ -358,6 +359,11 @@ dl.article-info{
 #footer a{
 	color: white;
 	text-decoration:underline;
+	text-shadow: none;
+}
+#footer .navbar li a,
+#footer .navbar li span{
+	font-size: 12px
 }
 .footer1, .footer2{
 	font-size: 12px;
