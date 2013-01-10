@@ -130,8 +130,8 @@ ul.nav li {
 	margin-top: -1px;
 }
 
-.dropdown-menu .dropdown-menu  a,
-.dropdown-menu .dropdown-menu  span{
+.navbar .dropdown-menu .dropdown-menu  a,
+.navbar .dropdown-menu .dropdown-menu  span{
 	font-size: 13px;
 }
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus,
@@ -147,7 +147,7 @@ ul.nav li {
 	font-size:16px;
 	padding: 10px 30px;
 }
-.dropdown-menu .active > a, .dropdown-menu .active > a:hover{
+.navbar .dropdown-menu .active > a,.navbar .dropdown-menu .active > a:hover{
 	background-color: transparent;
 	background-image: none;
 	filter: none;
@@ -166,7 +166,7 @@ ul.nav li {
 	color: white;
 	box-shadow: none;
 }
-.dropdown-menu li > span:hover, .dropdown-menu .active > span{
+.navbar .dropdown-menu li > span:hover,.navbar .dropdown-menu .active > span{
 	background-color: transparent;
 	background-image: none;
 	filter: none;
@@ -180,8 +180,8 @@ ul.nav li {
 	 border-bottom-color: #fff;
     border-top-color: #fff;
 }
-.dropdown-menu a,
-.dropdown-menu span{
+.navbar .dropdown-menu a,
+.navbar .dropdown-menu span{
 	padding:4px 0;
 }
 #nav-toolbar .dropdown-menu li,
@@ -191,7 +191,7 @@ ul.nav li {
 	padding-right: 10px;
 	list-style:none outside none;
 }
-.dropdown-menu li:last-child > a{
+.navbar .dropdown-menu li:last-child > a{
 	border-bottom: 0 none;
 }
 .nav-collapse .dropdown-menu a:hover{
@@ -200,7 +200,7 @@ ul.nav li {
 	background-color: transparent;
 }
 /******************************* Sub  menu ************************************************/
-.dropdown-menu{
+.navbar .dropdown-menu{
 	border-radius: 0 0 0 0;
 	box-shadow: 0 0 0;
 }
@@ -779,12 +779,6 @@ aside .moduletext_ms1,
 	color:#13B2D2;	
 }
 
-
-
-
-.nav{
-	margin-bottom: 0;
-}
 .nav + *{
 	margin-top: 20px;
 }
@@ -823,7 +817,6 @@ aside .moduletext_ms1,
 	text-decoration:none;
 	margin-top: 10px;
 	line-height: normal;
-	padding: 0 5px;
 }
 
 .navbar .nav > li > a:focus,
@@ -1152,4 +1145,31 @@ li{
 }
 .hide-text{
 	display: none;
+}
+/*TABS*/
+dl.nav-tabs{
+	padding-bottom: 7px;
+}
+dl.tabs.nav h3{
+	margin-top: 0;
+}
+.nav-tabs .tabs a,
+#myTab.nav-tabs > li > a {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 8px 12px;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 1px;
+}
+.nav-tabs .tabs a:hover,
+#myTab.nav-tabs > li > a:hover{
+	background-color: #eee;
+}
+
+ul.actions.dropdown-menu{
+	padding: 5px 0;
+}
+p.img_caption{
+	background-color: transparent;
 }
