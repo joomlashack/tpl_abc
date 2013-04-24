@@ -880,11 +880,14 @@ p::-moz-selection{
 #header a{
 	color: black;
 }
+#top .moduletable,#top2 .moduletable{
+	max-width: 100%;
+}
 #top .search,#top2 .search{
 	max-width: 100%;
 }
 #top #mod-search-searchword,#top2 #mod-search-searchword{
-	max-width: 80%;
+	max-width: 76%;
 }
 #top h1,
 #top h2,
