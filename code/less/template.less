@@ -51,7 +51,7 @@ nav#bottom-menu {
 .navbar-inner {
 	border-radius: 0 0 0 0;
 	border: 0 none;
-	box-shadow: 0 0;
+	box-shadow:none;
 	padding-left: 0;
 	padding-right: 0;
 	border-bottom: 1px solid @color_three;
@@ -95,6 +95,9 @@ ul.nav li {
 	margin-right: 9px;
 }
 
+.navbar .nav > li{
+	margin-bottom: 0;
+}
 .navbar .nav > li > a,
 .navbar .nav > li > span{
 	padding: 10px 5px;
@@ -192,9 +195,9 @@ ul.nav li {
 	background-color: transparent;
 }
 /******************************* Sub  menu ************************************************/
-.navbar .dropdown-menu{
+.dropdown-menu{
 	border-radius: 0 0 0 0;
-	box-shadow: 0 0 0;
+	box-shadow:none;
 }
 /********** Remove de triangle en dropdown-menu *******************************************/
 .navbar .nav > li > .dropdown-menu:after{
@@ -222,7 +225,7 @@ ul.nav li {
 	filter: none;
 }
 .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
-	box-shadow: 0 0 ;
+	box-shadow: none ;
 }
 .navbar-inverse .nav li.dropdown > .dropdown-toggle .caret{
 	border-bottom-color: #fff;
@@ -830,7 +833,7 @@ aside .moduletext_ms1,
 	background-color: transparent;
 	padding: 0;
 	border:0 none;
-	box-shadow:0 0 0;
+	box-shadow:none;
 	margin-left: 0!important;
 	margin-right: 0!important;
 	border-radius: 0 0 0 0;
@@ -970,7 +973,7 @@ h4 a{
 }
 body > * > div.container,
 body > div.container,
-body footer > div.container {
+body footer > div.container , #toolbar .container{
 	border-left: 1px solid @color_three;
 	border-right:1px solid @color_three;
 	padding-left:10px;
@@ -1233,4 +1236,12 @@ div.lifestream ul.stream li {
 .wrapper-menu,
 .wrapper-bottom-menu{
 	background-color: @navbarBackground;
+}
+.btn-group{
+	.dropdown-menu{
+		background-color: @grayLight;
+		li a{
+			color:@white;
+		}
+	}
 }
