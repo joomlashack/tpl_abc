@@ -95,24 +95,20 @@ ul.nav li {
 	margin-right: 9px;
 }
 
-
 .navbar .nav > li > a,
 .navbar .nav > li > span{
 	padding: 10px 5px;
 }
 #menu li ,#bottom-menu li {
-	list-style:disc outside none;
 	color:white;
 	margin-right: 20px;
 }
 
 #bottom-menu li{
-
 	display: table;
 }
 #menu li:last-child,#bottom-menu li:last-child{
 	margin-right:0;
-
 }
 #nav-toolbar .dropdown-menu,
 #menu .dropdown-menu ,
@@ -139,7 +135,8 @@ ul.nav li {
 	box-shadow: none;
 }
 
-.navbar-inverse .brand, .navbar-inverse .nav > li > a{
+#toolbar .brand, #toolbar .nav > li > a,
+#toolbar .nav > li > span.separator{
 	color: white;
 	text-shadow: none;
 	font-size:16px;
@@ -171,9 +168,6 @@ ul.nav li {
 	color: #666;
 }
 /**************************** link hover ***********************************************/
-.nav-collapse .nav > li > a:hover{
-
-}
 .navbar .nav li.dropdown > .dropdown-toggle:hover .caret{
 	 border-bottom-color: #fff;
     border-top-color: #fff;
@@ -214,8 +208,7 @@ ul.nav li {
 #nav-toolbar.nav-collapse {
 	margin-left: -20px;
 	margin-right: -20px;
-	border-bottom: 1px solid;
-
+	border-bottom: 1px solid @color_three;
 }
 #toolbar .navbar .nav {
 	margin: 0 auto;
@@ -223,7 +216,7 @@ ul.nav li {
 	float: none;
 	display: table;
 }
-.navbar-inverse .navbar-inner{
+#toolbar .navbar-inner{
 	background-image: none;
 	border: 0 none;
 	filter: none;
@@ -232,7 +225,7 @@ ul.nav li {
 	box-shadow: 0 0 ;
 }
 .navbar-inverse .nav li.dropdown > .dropdown-toggle .caret{
-	 border-bottom-color: #fff;
+	border-bottom-color: #fff;
     border-top-color: #fff;
 }
 span.separator{
@@ -1238,6 +1231,6 @@ div.lifestream ul.stream li {
 	background-color: @linkColor;
 }
 .wrapper-menu,
-.wrapper-bottom-menu,
+.wrapper-bottom-menu{
 	background-color: @navbarBackground;
 }
