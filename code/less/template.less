@@ -48,6 +48,7 @@ nav#bottom-menu {
 	margin: 0 auto;
 }
 /******************************* menu ************************************************/
+
 .navbar-inner {
 	border-radius: 0 0 0 0;
 	border: 0 none;
@@ -69,10 +70,6 @@ nav#bottom-menu {
 	color: white;
 }
 
-#menu ul.nav.menu li:first-child,
-#bottom-menu ul.nav.menu li:first-child {
-list-style: none;
-}
 /**************************** link  ***********************************************/
 /****** menu ******/
 ul.nav li {
@@ -95,7 +92,7 @@ ul.nav li {
 	margin-right: 9px;
 }
 
-.navbar .nav > li{
+.navbar .nav li{
 	margin-bottom: 0;
 }
 .navbar .nav > li > a,
@@ -104,14 +101,19 @@ ul.nav li {
 }
 #menu li ,#bottom-menu li {
 	color:white;
-	margin-right: 20px;
 }
-
+#menu .nav > li ,#bottom-menu .nav > li {
+	background-image: url(../../images/bullet_nav_abc.png);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	padding-left: 20px;
+	&:first-child{
+		background-image: none;
+		padding-left: 0;
+	}
+}
 #bottom-menu li{
 	display: table;
-}
-#menu li:last-child,#bottom-menu li:last-child{
-	margin-right:0;
 }
 #nav-toolbar .dropdown-menu,
 #menu .dropdown-menu ,
@@ -1242,6 +1244,16 @@ div.lifestream ul.stream li {
 		background-color: @grayLight;
 		li a{
 			color:@white;
+		}
+	}
+}
+.nav {
+	li {
+		span.separator{
+			color:@linkColor;
+			&:hover{
+				color:@linkColorHover;
+			}
 		}
 	}
 }
