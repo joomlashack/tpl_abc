@@ -129,8 +129,16 @@
 
 	#toolbar .container,
 	.wrapper-menu .container,
-	#header .container{
-		border:0 none;
+	#header .container,
+	#nav-menu.nav-collapse, #nav-bottom-menu.nav-collapse{
+		border:0;
+	}
+	#toolbar .container,
+	#toolbar .navbar-fixed-top .navbar-inner,
+	.wrapper-menu .container{
+		padding-left: 0;
+		padding-right: 0;
+		width: auto;
 	}
 
 	#menu .dropdown-menu li, #bottom-menu .dropdown-menu li, #nav-toolbar .dropdown-menu li {
@@ -177,6 +185,15 @@
 	#nav-toolbar.nav-collapse{
 		margin-left: 0;
 		margin-right: 0;
+	}
+	.nav-collapse .nav>li>a, .nav-collapse .dropdown-menu a{
+		font-weight: normal;
+	}
+	.wrapper-menu,.wrapper-bottom-menu{
+		 .navbar .nav {
+			margin: 0 auto;
+			display: table;
+		}
 	}
 }
 
