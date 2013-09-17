@@ -145,11 +145,15 @@ ul.nav li {
 }
 
 #toolbar .brand, #toolbar .nav > li > a,
-#toolbar .nav > li > span.separator{
+#toolbar .nav > li > span.separator {
 	color: white;
 	text-shadow: none;
 	font-size:16px;
 	padding: 10px 30px;
+
+	&.hide-text {
+		font-size: 0;
+	}
 }
 .navbar .dropdown-menu  a:hover span.separator:hover{
 	background-image: none;
