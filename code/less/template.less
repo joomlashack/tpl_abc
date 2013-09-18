@@ -322,20 +322,8 @@ dl.article-info{
 	float: left;
 	margin-right: 10px;
 }
-#footer{
-	background-color: @color_five;
-	background-image: none;
-	border:0 none;
-	filter: none;
-	padding-bottom: 17px;
-}
 .wrapper-footer{
 	padding-top: 17px;
-}
-.footer-content{
-	padding-left: 20px;
-	padding-right: 20px;
-	overflow: hidden;
 }
 .border-closure-ft{
 	margin-left: -20px;
@@ -346,17 +334,34 @@ dl.article-info{
 #bottom-menu .navbar-inner{
 	border: 0 none;
 }
-#footer .container{
-	padding-top: 10px;
-}
-#footer a{
+#footer{
+	background-color: @color_five;
+	background-image: none;
+	border:0 none;
 	color: white;
-	text-decoration:underline;
-	text-shadow: none;
-}
-#footer .navbar li a,
-#footer .navbar li span{
-	font-size: 12px
+	filter: none;
+	padding-bottom: 17px;
+
+	.footer-content{
+		padding-left: 20px;
+		padding-right: 20px;
+		overflow: hidden;
+		.menu li {
+			float: left;
+			margin-left: 10px;
+		}
+		a{
+			color: white;
+			text-decoration:underline;
+			text-shadow: none;
+		}
+		.navbar li a{
+			font-size: 12px
+		}
+		.container{
+			padding-top: 10px;
+		}
+	}
 }
 .footer1, .footer2{
 	font-size: 12px;
