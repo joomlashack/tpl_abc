@@ -207,6 +207,15 @@ nav {
 .nav.nav-tabs,
 .nav.nav-pills {
 	li {
+		> a {
+			[class^="icon-"],
+			[class*=" icon-"] {
+				color: @linkColor;
+			}
+			.caret {
+				border-top-color: @linkColor;				
+			}
+		}
 		&.active {
 			> a {
 				color: @linkColor;
