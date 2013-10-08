@@ -1,3 +1,69 @@
+@media (max-width: 979px){
+	.custom_ms2 i,
+	.custom_ms2 h2{
+		font-size: 1.5em;
+	}
+
+	.nav,
+	.navbar-inner,
+	.nav .navbar-inner,
+	.navbar .nav,
+	.navbar .nav .navbar-inner {
+		margin: 0 auto;
+		border: 0;
+			.nav-collapse {
+				border: 0;
+			}
+			.btn-navbar {
+			background-color: transparent;
+			background-image: none;
+			filter: none;
+			border: 0;
+			&:hover {
+				background-color: #BF2C2C;
+			}
+			.icon-bar {
+				width: 40px;
+			}
+		}
+		li {
+			list-style: none;
+			> a {
+				border-bottom: 1px solid #BF2C2C;
+				&:hover {
+					background-color: #BF2C2C;
+				}
+			}
+			.dropdown-menu {
+				border: 0;
+				li {
+					border: 0;
+					> a {
+						&:hover {
+							background-color: #BF2C2C;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#toolbar {
+		.nav,
+		.navbar-inner,
+		.nav .navbar-inner,
+		.navbar .nav,
+		.navbar .nav .navbar-inner {
+			width: auto;
+			margin: 0 auto;
+			.container {
+				width: auto;
+				border: 0;
+			}
+		}
+	}
+
+}
 
 @media(max-width:768px){
 	#sidebar1, #sidebar2{
@@ -5,6 +71,15 @@
 	}
 	#header{
 		text-align: center;
+	}
+	.wrapper-menu,
+	.wrapper-bottom-menu,
+	#header{
+		margin-left: -20px;
+		margin-right: -20px;
+		.container {
+			margin: 0 20px;
+		}
 	}
 	.module, .moduletable, .moduletext, #top > div {
 		padding: 0;
@@ -19,20 +94,11 @@
 	#toolbar, #header, #menu, #featured, #grid-top, #main-content, #above-content, #breadcrumbs, #grid-bottom, #grid-bottom2, #bottom-menu {
 		margin-bottom: 0;
 	}
-	.wrapper-menu,
-	#header{
-		margin-left: -20px;
-		margin-right: -20px;
-	}
 	.wrapper-container-featured{
 		margin-left: -20px;
 		margin-right: -20px;
 		width: auto;
 
-	}
-	.wrapper-menu .container{
-		padding-left: 0;
-		padding-right: 0;
 	}
 	.content-wrapp{
 		margin-left: 0;
@@ -40,7 +106,7 @@
 	}
 	#sidebar1 .moduletable_ms1,
 	#sidebar2 .moduletable_ms1{
-	padding:0 !important;
+		padding:0 !important;
 	}
 
 	/* nosp-mobile styles */
@@ -91,109 +157,11 @@
 }
 @media(max-width:1200px){
 
-	.navbar-inverse .brand,
-	.navbar-inverse .nav > li > a{
-		padding: 10px 25px;
-	}
 }
 @media(max-width:1163px){
 	aside #mod-search-searchword{
 		clear: both;
 		display: block;
-	}
-	.navbar-inverse .brand,
-	.navbar-inverse .nav > li > a{
-		padding: 10px 25px;
-	}
-}
-@media (max-width: 979px){
-
-	#menu .nav > li, #bottom-menu .nav > li {
-		background-image: none;
-		padding-left: 0;
-	}
-
-	#bottom-menu .navbar-inner{
-		display: block;
-	}
-	#toolbar span.separator{
-		color: #fbfbfb;
-	}
-	#bottom-menu .nav-collapse .dropdown-menu a:hover{
-	color: white;
-	}
-
-	#toolbar .container-fluid {
-		padding: 0
-	}
-
-	#toolbar .container,
-	.wrapper-menu .container,
-	#header .container,
-	#nav-menu.nav-collapse, #nav-bottom-menu.nav-collapse{
-		border:0;
-	}
-	#toolbar .container,
-	#toolbar .navbar-fixed-top .navbar-inner,
-	.wrapper-menu .container{
-		padding-left: 0;
-		padding-right: 0;
-		width: auto;
-	}
-
-	#menu .dropdown-menu li, #bottom-menu .dropdown-menu li, #nav-toolbar .dropdown-menu li {
-		border: 0;
-	}
-
-	#nav-toolbar .navbar .nav > li > a,
-	.nav-collapse .nav > li > a,
-	.navbar .nav > li > .dropdown-menu:after,
-	#menu .dropdown-menu,
-	#bottom-menu .dropdown-menu,
-	#nav-toolbar .dropdown-menu {
-		border: 0;
-		color: #ffffff;
-	}
-	.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
-		color: white;
-	}
-	.navbar-inverse .nav-collapse .nav > li > a:hover,
-	.navbar-inverse .nav-collapse .dropdown-menu a:hover{
-		background-color: #CC0000;
-	}
-	.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus{
-		background-color: #CC0000;
-	}
-	#toolbar .dropdown-menu a{
-		border-bottom: 1px solid #CC0000;
-	}
-	.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
-	.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
-	.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle{
-		background-color: #3F4345;
-	}
-
-	#nav-toolbar.nav-collapse,
-	#nav-menu.nav-collapse {
-		display: block;
-	}
-	.custom_ms2 i,
-	.custom_ms2 h2{
-		font-size: 1.5em;
-	}
-	.navbar-inner,
-	#nav-toolbar.nav-collapse{
-		margin-left: 0;
-		margin-right: 0;
-	}
-	.nav-collapse .nav>li>a, .nav-collapse .dropdown-menu a{
-		font-weight: normal;
-	}
-	.wrapper-menu,.wrapper-bottom-menu{
-		 .navbar .nav {
-			margin: 0 auto;
-			display: table;
-		}
 	}
 }
 

@@ -18,6 +18,7 @@ defined('_JEXEC') or die('Restricted access');
 <html>
 <head>
     <w:head />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand">
 </head>
 <body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass?>"<?php endif; ?>>
 
