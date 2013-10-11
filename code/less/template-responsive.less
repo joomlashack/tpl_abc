@@ -19,9 +19,6 @@
 			background-image: none;
 			filter: none;
 			border: 0;
-			&:hover {
-				background-color: #BF2C2C;
-			}
 			.icon-bar {
 				width: 40px;
 			}
@@ -30,7 +27,8 @@
 			list-style: none;
 			> a {
 				border-bottom: 1px solid #BF2C2C;
-				&:hover {
+				&:hover,
+				&:focus {
 					background-color: #BF2C2C;
 				}
 			}
@@ -39,7 +37,8 @@
 				li {
 					border: 0;
 					> a {
-						&:hover {
+						&:hover,
+						&:focus {
 							background-color: #BF2C2C;
 						}
 					}
