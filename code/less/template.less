@@ -49,7 +49,7 @@ nav {
 	margin: 0;
 }
 
-// .wrapper-toolbar,
+
 .wrapper-menu,
 .wrapper-bottom-menu{
 	background-color: @navbarBackground;
@@ -201,13 +201,19 @@ nav {
 	.nav .navbar-inner,
 	.navbar .nav,
 	.navbar .nav .navbar-inner {
-		> li {
-			color: @navbarInverseLinkColor;
+		li {
+			> a {
+				color: @navbarInverseLinkColor;
+				-webkit-text-shadow: none;
+				-moz-text-shadow: none;
+				-ms-text-shadow: none;
+				-o-text-shadow: none;
+				text-shadow: none;
+			}
 		}
 	}
 }
 
-.nav.nav-tabs,
 .nav.nav-pills {
 	li {
 		> a {
@@ -216,7 +222,7 @@ nav {
 				color: @linkColor;
 			}
 			.caret {
-				border-top-color: @linkColor;				
+				border-top-color: @linkColor;
 			}
 		}
 		&.active {
@@ -235,81 +241,27 @@ nav {
 }
 
 .module {
-	.nav {
-		li {
+	.nav,
+	.nav.nav-stacked {
+		> li {
 			list-style: none;
 			.dropdown-menu {
-				li {
-					> a {
-						color: @linkColor;
-						[class^="icon-"],
-						[class*=" icon-"] {
-							color: @linkColor;
-						}
-						.caret {
-							border-top-color: @linkColor;
-						}
-						&:hover,
-						&:focus {
-							@linkColorHover;
-							[class^="icon-"],
-							[class*=" icon-"] {
-								color: @linkColorHover;
-							}
-							.caret {
-								border-top-color: @linkColorHover;
-							}
-						}
+				background-color: @dropdownBackground;
+			}
+			&.active {
+				> a {
+					color: @black;
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: @black;
+					}
+					.caret {
+						border-top-color: @black;
 					}
 				}
 			}
 		}
-    	&.nav-stacked,
-    	&.nav-pills {
-    		li {
-    			&.active {
-    				> a {
-						color: @linkColor;
-						[class^="icon-"],
-						[class*=" icon-"] {
-							color: @linkColor;
-						}
-						.caret {
-							border-top-color: @linkColor;
-						}
-    				}
-    			}
-    			.dropdown-menu,
-    			.dropdown {
-    				background-color: transparent;
-    				li {
-    					> a {
-							color: @linkColor;
-							[class^="icon-"],
-							[class*=" icon-"] {
-								color: @linkColor;
-							}
-							.caret {
-								border-top-color: @linkColor;
-							}
-    					}
-    					&.active {
-	    					> a {
-								color: @linkColor;
-								[class^="icon-"],
-								[class*=" icon-"] {
-									color: @linkColor;
-								}
-								.caret {
-									border-top-color: @linkColor;
-								}
-	    					}
-    					}
-    				}
-    			}
-    		}
-    	}
-   	}
+	}
 }
 
 /************************* Logo **********************************************/
