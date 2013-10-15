@@ -142,11 +142,11 @@ dl.article-info{
 	background-color: @color_five;
 	background-image: none;
 	border:0 none;
-	color: white;
 	filter: none;
 	padding-bottom: 17px;
 
 	.footer-content{
+		color: @white;
 		padding-left: 20px;
 		padding-right: 20px;
 		overflow: hidden;
@@ -155,6 +155,21 @@ dl.article-info{
 			text-decoration:underline;
 			text-shadow: none;
 		}
+	}
+	.moduletable,
+	.moduletable_ms1,
+	.moduletable_ms2,
+	.moduletable_ms3,
+	.moduletext,
+	.moduletext_ms1,
+	.moduletext_ms2,
+	.moduletext_ms3,
+	.module,
+	.module_ms1,
+	.module_ms2,
+	.module_ms3 {
+		margin-bottom: 0;
+		padding: 0;
 	}
 }
 .footer1, .footer2{
@@ -279,20 +294,7 @@ aside .uneditable-input{
 #header .module_ms3{
 	margin-bottom: 0;
 }
-#footer .moduletable,
-#footer .moduletable_ms1,
-#footer .moduletable_ms2,
-#footer .moduletable_ms3,
-#footer .moduletext,
-#footer .moduletext_ms1,
-#footer .moduletext_ms2,
-#footer .moduletext_ms3,
-#footer .module,
-#footer .module_ms1,
-#footer .module_ms2,
-#footer .module_ms3{
-	margin-bottom: 0;
-}
+
 
 .moduletable,
 .moduletable_ms1,
@@ -322,10 +324,7 @@ aside .moduletable,
 aside .moduletext,
 aside .module_ms1,
 aside .moduletable_ms1,
-aside .moduletext_ms1,
-#footer .module,
-#footer .moduletable,
-#footer .moduletext{
+aside .moduletext_ms1 {
 	padding: 0;
 }
 
@@ -867,9 +866,7 @@ li{
 		}
 	}
 }
-#footer {
-	color: white;
-}
+
 
 
 /******** Other styles ***************/
@@ -980,14 +977,6 @@ div.lifestream ul.stream li {
 	background-color: @linkColor;
 }
 
-.btn-group{
-	.dropdown-menu{
-		background-color: @grayLight;
-		li a{
-			color:@white;
-		}
-	}
-}
 .form-actions{
 	padding: 10px !important;
 }
