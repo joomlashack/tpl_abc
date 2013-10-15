@@ -15,3 +15,24 @@
 .pager a:hover,.pager span:hover{
 	background-color: @color_five;
 }
+
+.module {
+	.nav,
+	.nav.nav-stacked {
+		> li {
+			&.active {
+				> a:hover,
+				> a:focus {
+					color: @white;
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: @white;
+					}
+					.caret {
+						border-top-color: @white;
+					}
+				}
+			}
+		}
+	}
+}

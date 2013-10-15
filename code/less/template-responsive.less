@@ -1,7 +1,17 @@
+/* Phones and tablets */
 @media (max-width: 979px){
 	.custom_ms2 i,
 	.custom_ms2 h2{
 		font-size: 1.5em;
+	}
+
+	.navbar-inner {
+		margin: 0;
+	}
+
+	.content-wrapp{
+		margin-right: 0;
+		margin-left: 0;
 	}
 
 	.nav,
@@ -26,10 +36,10 @@
 		li {
 			list-style: none;
 			> a {
-				border-bottom: 1px solid #BF2C2C;
+				border-bottom: 1px solid @dropdownBackground;
 				&:hover,
 				&:focus {
-					background-color: #BF2C2C;
+					background-color: @dropdownBackground;
 				}
 			}
 			.dropdown-menu {
@@ -39,7 +49,7 @@
 					> a {
 						&:hover,
 						&:focus {
-							background-color: #BF2C2C;
+							background-color: @dropdownBackground;
 						}
 					}
 				}
@@ -59,12 +69,16 @@
 				width: auto;
 				border: 0;
 			}
+			.nav-collapse {
+				margin: 0;
+			}
 		}
 	}
 
 }
 
-@media(max-width:768px){
+/* Phones */
+@media(max-width:767px){
 	#sidebar1, #sidebar2{
 		border: 0 none;
 	}
@@ -97,7 +111,6 @@
 		margin-left: -20px;
 		margin-right: -20px;
 		width: auto;
-
 	}
 	.content-wrapp{
 		margin-left: 0;
@@ -154,13 +167,11 @@
 
 
 }
-@media(max-width:1200px){
 
-}
-@media(max-width:1163px){
+/* Wide screens */
+@media(max-width:1200px){
 	aside #mod-search-searchword{
 		clear: both;
 		display: block;
 	}
 }
-
