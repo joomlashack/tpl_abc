@@ -531,12 +531,40 @@ aside .moduletext_ms1 {
 .moduletext_ms3.blue h3{
 	color:@blue;
 }
-
 .nav + *{
 	margin-top: 20px;
 }
-
-
+.nav.nav-tabs{
+	>li{
+		margin-bottom: -1px !important;
+		>a{
+			&:hover,
+			&:focus{
+				border-bottom-color: transparent !important;
+				background-color: #eee ;
+			}
+		}
+	}
+	>.active{
+		>a,
+		>a:hover,
+		>a:focus{
+			background-color: @bodyBackground !important;
+		}
+	}
+}
+.tabbable {
+	.nav-tabs{
+	>li{
+		>a{
+			&:hover,
+			&:focus{
+				border-bottom-color: @grayLighter !important;
+			}
+		}
+	}
+}
+}
 
 #main #tabs h1 a,
 #main #tabs h2 a,
@@ -1069,40 +1097,51 @@ nav {
 				background-image: none;
 			}
 		}
-		.dropdown-menu {
-			border: 1px solid @color_three;
-			padding: 0;
-			border-radius: 0px;
-			li {
-				border-top: 1px solid @color_three;
-				margin-right: 0;
-				margin-top: -1px;
-				padding: 0 10px;
-				> a {
-					font-size: 0.9em;
-					&:hover,
-					&:focus {
-						box-shadow: none;
-						background-color: transparent;
-						text-shadow:0 0 0, 0 0 0;
-						background-image: none;
-					}
+		&.dropdown{
+
+			.dropdown-menu {
+				.border-radius(0);
+				.box-shadow(none);
+				border: 1px solid @color_three !important;
+				padding: 0;
+
+				&:before,
+				&:after{
+					display: none;
 				}
-				.sub-menu {
-					&:before,
-					&:after {
-						display: none;
-					}
-				}
-				&.active {
+				li {
+					border-top: 1px solid @color_three;
+					margin-right: 0;
+					margin-top: -1px;
+					padding: 0 10px;
 					> a {
-						color: @color_one;
-						.caret {
-							border-left-color: @color_one;
+						font-size: 0.9em;
+						padding-top: 4px;
+						padding-bottom: 4px;
+						&:hover,
+						&:focus {
+							box-shadow: none;
+							background-color: transparent;
+							text-shadow:0 0 0, 0 0 0;
+							background-image: none;
 						}
-						[class^="icon-"],
-						[class*=" icon-"] {
+					}
+					.sub-menu {
+						&:before,
+						&:after {
+							display: none;
+						}
+					}
+					&.active {
+						> a {
 							color: @color_one;
+							.caret {
+								border-left-color: @color_one;
+							}
+							[class^="icon-"],
+							[class*=" icon-"] {
+								color: @color_one;
+							}
 						}
 					}
 				}
@@ -1218,7 +1257,7 @@ nav {
 			}
 		}
 
-	}	
+	}
 }
 
 .nav.nav-pills {
@@ -1234,13 +1273,14 @@ nav {
 		}
 		&.active {
 			> a {
-				color: @linkColor;
+				background-color: @linkColor;
+				color: @white;
 				[class^="icon-"],
 				[class*=" icon-"] {
-					color: @linkColor;
+					color: @white;
 				}
 				.caret {
-					border-top-color: @linkColor;
+					border-top-color: @white;
 				}
 			}
 		}
@@ -1252,41 +1292,155 @@ nav {
 	.nav.nav-stacked {
 		> li {
 			list-style: none;
-			.dropdown-menu {
-				background-color: @dropdownBackground;
-				li {
-					&.active {
-						> a,
-						> a:hover,
-						> a:focus {
-							color: @color_one;
+			padding-right:0;
+			&.dropdown{
+				.dropdown-menu {
+					border: 0 !important;
+					li {
+						a{
+							color: @textColor;
 							[class^="icon-"],
 							[class*=" icon-"] {
-								color: @color_one;
+								color: @textColor;
 							}
 							.caret {
-								border-top-color: @color_one;
+								border-top-color: @textColor;
 								border-left-color: transparent;
 							}
+							&:hover,
+							&:focus{
+								color: @linkColorHover;
+								[class^="icon-"],
+								[class*=" icon-"] {
+									color: @linkColorHover;
+								}
+								.caret {
+									border-top-color: @linkColorHover;
+									border-left-color: transparent;
+								}
+							}
 						}
-					}					
+						&.active {
+							> a,
+							> a:hover,
+							> a:focus {
+								color: @linkColorHover;
+								[class^="icon-"],
+								[class*=" icon-"] {
+									color: @linkColorHover;
+								}
+								.caret {
+									border-top-color: @linkColorHover;
+									border-left-color: transparent;
+								}
+							}
+						}
+					}
 				}
 			}
 			&.active {
 				> a {
 					color: @black;
-					[class^="icon-"],
+						[class^="icon-"],
 					[class*=" icon-"] {
 						color: @black;
 					}
 					.caret {
 						border-top-color: @black;
 					}
-					&:hover {
-						background-color: @dropdownBackground;
+					&:hover,
+					&:focus{
+						background-color: transparent;
+						color: @black;
+						[class^="icon-"],
+						[class*=" icon-"] {
+							color: @black;
+						}
+						.caret {
+							border-top-color: @black;
+						}
 					}
 				}
 			}
 		}
 	}
+	.nav.nav-list,
+	.nav.nav-pills{
+		> li {
+			&.dropdown{
+				.dropdown-menu {
+					li {
+						a{
+							color: @textColor;
+							[class^="icon-"],
+							[class*=" icon-"] {
+								color: @textColor;
+							}
+							.caret {
+								border-top-color: @textColor;
+								border-left-color: transparent;
+							}
+							&:hover,
+							&:focus{
+								color: @linkColorHover;
+								[class^="icon-"],
+								[class*=" icon-"] {
+									color: @linkColorHover;
+								}
+								.caret {
+									border-top-color: @linkColorHover;
+									border-left-color: transparent;
+								}
+							}
+						}
+						&.active {
+							> a,
+							> a:hover,
+							> a:focus {
+								color: @linkColorHover;
+								[class^="icon-"],
+								[class*=" icon-"] {
+									color: @linkColorHover;
+								}
+								.caret {
+									border-top-color: @linkColorHover;
+									border-left-color: transparent;
+								}
+							}
+						}
+					}
+				}
+			}
+			&.active {
+				> a {
+					background-color: @linkColorHover;
+					color: @white;
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: @white;
+					}
+					.caret {
+						border-top-color: @white;
+					}
+					&:hover,
+					&:focus{
+						background-color: @linkColorHover;
+						color: @white;
+						[class^="icon-"],
+						[class*=" icon-"] {
+							color: @white;
+						}
+						.caret {
+							border-top-color: @white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.navbar-inverse .nav li.dropdown .dropdown-menu li>a:hover .caret,
+.navbar-inverse .navbar-inner li.dropdown .dropdown-menu li>a:hover .caret {
+	border-bottom-color: transparent;
+	border-top-color: transparent;
 }
