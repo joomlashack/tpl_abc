@@ -1,6 +1,9 @@
-
-body{
-	overflow-x: hidden;
+.flexbox-content(){
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;
 }
 
 /************* Header *******************************************************/
@@ -13,10 +16,9 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: @color_two;
 	color: white;
 	margin-bottom: 0;
-}
-
-#header > .container{
-	padding: 10px;
+	> .container{
+		padding: 10px;
+	}
 }
 .top-space{
 	padding-top: 10px;
@@ -53,7 +55,6 @@ h1, h2, h3, h4, h5, h6 {
 #member-registration .validate{
 	margin-bottom: 0;
 }
-
 
 .category-module.nav li{
 	overflow: hidden;
@@ -734,10 +735,7 @@ body footer > div.container,
 	padding-left:10px;
 	padding-right: 10px;
 }
-#sidebar1, #sidebar2{
-	margin-bottom: -3000px;
-	padding-bottom: 3000px;
-}
+
 #sidebar2{
 	border-left:1px solid @color_three;
 	-webkit-box-sizing: border-box;
@@ -779,16 +777,7 @@ body footer > div.container,
 #sidebar2 [class*="moduletable"]{
 	padding: 0 10px;
 }
-#sidebar1 [class*="span"],
-.row-fluid #sidebar1 [class*="span"],
-#sidebar2 [class*="span"],
-.row-fluid #sidebar2 [class*="span"],
-#sidebar1 .module,
-#sidebar2 .module,
-#sidebar1,
-#sidebar2{
-	overflow: visible;
-}
+
 #sidebar1 .moduletable_ms1{
 	padding:0 10px 0 0 !important;
 	.nav , .newsflash_ms1, .custom_ms1{
@@ -811,9 +800,19 @@ li{
 	}
 }
 .content-wrapp{
-	margin-right: -30px;
 	margin-left: -10px;
-	overflow: hidden;
+	margin-right: -10px;
+	> .row , > .row-fluid{
+		.box-sizing(border-box);
+		.flexbox-content();
+		> [class*="span"]{
+			float: none;
+
+			&:first-child{
+				border-left: 0;
+			}
+		}
+	}
 }
 #grid-top{
 	position: relative;
@@ -1443,4 +1442,18 @@ nav {
 .navbar-inverse .navbar-inner li.dropdown .dropdown-menu li>a:hover .caret {
 	border-bottom-color: transparent;
 	border-top-color: transparent;
+}
+
+.is_internet.v_8,
+.is_internet.v_9{
+	.content-wrapp{
+		display: table;
+		> .row , > .row-fluid{
+			display: table-row;
+
+			> [class*="span"]{
+				display: table-cell;
+			}
+		}
+	}
 }
