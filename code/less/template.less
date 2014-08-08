@@ -296,7 +296,6 @@ aside .uneditable-input{
 	margin-bottom: 0;
 }
 
-
 .moduletable,
 .moduletable_ms1,
 .moduletable_ms2,
@@ -335,107 +334,86 @@ aside .moduletext_ms1 {
 	.opacity(50);
 }
 /*********************** ms1 ******************************/
-.module_ms1 h1, .moduletable_ms1 h1, .moduletext_ms1 h1,
-.module_ms1 h2, .moduletable_ms1 h2, .moduletext_ms1 h2,
-.module_ms1 h4, .moduletable_ms1 h4, .moduletext_ms1 h4,
-.module_ms1 h5, .moduletable_ms1 h5, .moduletext_ms1 h5,
-.module_ms1 h6, .moduletable_ms1 h6, .moduletext_ms1 h6{
-	color: #333;
-}
-.moduletable_ms1,
 .module_ms1,
+.moduletable_ms1,
 .moduletext_ms1{
 	padding:10px;
-}
-.moduletable_ms1.blue a,
-.module_ms1.blue a,
-.moduletext_ms1.blue a{
-	color: @blue;
-}
-.moduletable_ms1 h3,
-.module_ms1 h3,
-.moduletext_ms1 h3
-{
-	text-transform: uppercase;
-	padding: 0 20px;
-	color: #ffffff;
-}
-
-.module_ms1.blue h3,
-.moduletable_ms1.blue h3,
-.moduletext_ms1.blue h3{
-	background-color: #14B1D2;
-	color: #71D1E4;
-
-}
-
-.moduletable_ms1.blue .nav-pills > .active > a,
-.moduletable_ms1.blue .nav-pills > .active > a:hover {
-	background-color: #71D1E4;
-	color: white;
-}
-
-/********* Red ms1 *************/
-.moduletable_ms1.red a,
-.module_ms1.red a,
-.moduletext_ms1.red a{
-	color: #D03636;
-}
-.module_ms1.red h3,
-.moduletable_ms1.red h3,
-.moduletext_ms1.red h3{
-	color: #E58584;
-	background-color:#D03636;
-}
-
-.moduletable_ms1.red .nav-pills > .active > a,
-.moduletable_ms1.red .nav-pills > .active > a:hover {
-	background-color: #E58584;
-	color: white;
-}
-
-/********* Yellow ms1 *************/
-.moduletable_ms1.yellow a,
-.module_ms1.yellow a,
-.moduletext_ms1.yellow a{
-	color: #FFA801;
-}
-.module_ms1.yellow h3,
-.moduletable_ms1.yellow h3,
-.moduletext_ms1.yellow h3{
-	background-color:#FFA801;
-	color: #FECA66;
-}
-
-.moduletable_ms1.yellow .nav-pills > .active > a,
-.moduletable_ms1.yellow .nav-pills > .active > a:hover {
-	background-color: #FECA66;
-	color: white;
-}
-
-/********* Green ms1 *************/
-.moduletable_ms1.green a,
-.module_ms1.green a,
-.moduletext_ms1.green a{
-	color: #9EBC20;
-}
-.module_ms1.green h3,
-.moduletable_ms1.green h3,
-.moduletext_ms1.green h3{
-	background-color:#9EBC20;
-	color: #C5D874;
-}
-.moduletable_ms1 a:hover,
-.module_ms1 a:hover,
-.moduletext_ms1 a:hover{
-	color: #333;
+	h1,h2,h4,h5,h6{
+		color: #333;
+	}
+	h3{
+		text-transform: uppercase;
+		padding: 0 20px;
+		color: #ffffff;
+	}
+	a{
+		&:hover,
+		&:focus{
+			color: #333;
+		}
+	}
+	&.blue{
+		a{
+			color: @blue;
+		}
+		h3{
+			background-color: #14B1D2;
+			color: #71D1E4;
+		}
+		.nav-pills > .active > a,
+		.nav-pills > .active > a:hover,
+		.nav-pills > .active > a:focus{
+			background-color: #71D1E4;
+			color: white;
+		}
+	}
+	&.red{
+		a{
+			color: #D03636;
+		}
+		h3{
+			background-color:#D03636;
+			color: #E58584;
+		}
+		.nav-pills > .active > a,
+		.nav-pills > .active > a:hover,
+		.nav-pills > .active > a:focus{
+			background-color: #E58584;
+			color: white;
+		}
+	}
+	&.yellow{
+		a{
+			color: #FFA801;
+		}
+		h3{
+			background-color:#FFA801;
+			color: #FECA66;
+		}
+		.nav-pills > .active > a,
+		.nav-pills > .active > a:hover,
+		.nav-pills > .active > a:focus{
+			background-color: #FECA66;
+			color: white;
+		}
+	}
+	&.green{
+		a{
+			color: #9EBC20;
+		}
+		h3{
+			background-color:#9EBC20;
+			color: #C5D874;
+		}
+		.nav-pills > .active > a,
+		.nav-pills > .active > a:hover,
+		.nav-pills > .active > a:focus{
+			background-color: #C5D874;
+			color: white;
+		}
+	}
 }
 
-.moduletable_ms1.green .nav-pills > .active > a,
-.moduletable_ms1.green .nav-pills > .active > a:hover {
-	background-color: #C5D874;
-	color: white;
-}
 /********************* ms2 ********************/
 .moduletable_ms2,
 .module_ms2,
