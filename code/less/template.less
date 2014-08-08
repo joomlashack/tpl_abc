@@ -1174,23 +1174,18 @@ nav {
 }
 
 #toolbar {
-	.nav,
-	.navbar-inner,
-	.nav .navbar-inner,
-	.navbar .nav,
-	.navbar .nav .navbar-inner {
+	.nav-collapse {
+		border: 0;
+		padding-left: 0;
+		margin: 0 -20px;
+		border-bottom: 1px solid @color_three;
+		padding: 0 20px;
+	}
+	.navbar-inner{
 		border-bottom: 0;
-		margin: 0;
 		box-shadow: none;
 		padding: 0;
-		.nav-collapse {
-			border: 0;
-			padding-left: 0;
-			margin: 0 -20px;
-			border-bottom: 1px solid @color_three;
-			padding: 0 20px;
-		}
-		> li {
+		.nav > li {
 			list-style: none;
 			> a {
 				font-size: 1.1em;
