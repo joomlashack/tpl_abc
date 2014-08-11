@@ -894,9 +894,22 @@ li{
 
 .well {
 	color: #666666;
+	.nav-list{
+		> .active{
+			> a,
+			> a:hover ,
+			> a:focus {
+				color: @textColor;
+			}
+		}
+	}
 }
 
 
+.nav-header{
+	padding-left: 5px;
+	padding-right: 5px;
+}
 /******** for wright ***************/
 .img-polaroid{
 	-webkit-box-sizing: border-box;
