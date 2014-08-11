@@ -305,7 +305,6 @@ aside .uneditable-input{
 .module_ms1,
 .module_ms2,
 .module_ms3{
-	// overflow: hidden;
 	margin-bottom: 20px;
 }
 .module,
@@ -1065,9 +1064,6 @@ nav {
 	box-shadow:none;
 	padding-left: 0;
 	padding-right: 0;
-	border-bottom: 1px solid @color_three;
-	margin-left: -20px;
-	margin-right: -20px;
 	.nav {
 		margin: 0 auto;
 		left: auto;
@@ -1122,19 +1118,34 @@ nav {
 	}
 }
 
+#menu{
+	.navbar-inner {
+		border-bottom: 1px solid @color_three;
+		margin-left: -20px;
+		margin-right: -20px;
+		.nav-collapse {
+			padding-left: 20px;
+			border-left: 1px solid @color_three;
+			margin-left: 9px;
+			border-right: 1px solid @color_three;
+			margin-right: 9px;
+		}
+	}
+}
+#bottom-menu{
+	.navbar-inner {
+		.nav-collapse {
+			border-left: 1px solid @color_three;
+			border-right: 1px solid @color_three;
+		}
+	}
+}
 .nav,
 .navbar-inner,
 .nav .navbar-inner,
 .navbar .nav,
 .navbar .nav .navbar-inner {
 	margin-bottom: 0;
-	.nav-collapse {
-		padding-left: 20px;
-		border-left: 1px solid @color_three;
-		margin-left: 9px;
-		border-right: 1px solid @color_three;
-		margin-right: 9px;
-	}
 	li {
 		font-family: @altFontFamily;
 		-webkit-text-stroke-width: 0.5px;
