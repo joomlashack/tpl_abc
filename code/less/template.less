@@ -352,6 +352,19 @@ aside .moduletext_ms1 {
 			color: #333;
 		}
 	}
+	.nav li>{
+		a:hover,
+		a:focus{
+			color: #333;
+			.caret {
+				border-top-color: #333;
+			}
+			[class^="icon-"],
+			[class*=" icon-"] {
+				color: #333;
+			}
+		}
+	}
 	&.blue{
 		a{
 			color: @blue;
@@ -1145,12 +1158,25 @@ nav {
 		}
 	}
 	> li {
-		list-style: disc outside none;
-		padding: 0 20px 0 0;
 		color: @navbarLinkColor;
+		padding: 0 0 0 20px;
+		position: relative;
+		&:before{
+			background-color: @navbarLinkColor;
+			content: '';
+			height: 5px;
+			position: absolute;
+			left: 6px;
+			top: 44%;
+			width: 5px;
+			.border-radius(10px);
+		}
 		&:first-child {
-			list-style: none;
 			padding-left: 0;
+			&:before{
+				content: none;
+				display: none;
+			}
 		}
 	}
 }
@@ -1168,9 +1194,12 @@ nav {
 		box-shadow: none;
 		padding: 0;
 		.nav > li {
-			list-style: none;
+			&:before{
+				content: none;
+				display: none;
+			}
 			> a {
-				font-size: 1.1em;
+				font-size: 16px;
 			}
 		}
 	}
@@ -1267,8 +1296,11 @@ nav {
 	.nav,
 	.nav.nav-stacked {
 		> li {
-			list-style: none;
 			padding-right:0;
+			&:before{
+				content: none;
+				display: none;
+		 	}
 			&.dropdown{
 				.dropdown-menu {
 					border: 0 !important;
