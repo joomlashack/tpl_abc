@@ -1105,7 +1105,20 @@ nav {
 					display: none;
 				}
 			}
+			&.divider-vertical{
+				padding: 0;
+				border-left-color: @color_one;
+				&:before{
+					content: none;
+					display: none;
+				}
+			}
 		}
+	}
+	.navbar-form,
+	.navbar-search{
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 
@@ -1321,11 +1334,6 @@ nav {
 	.nav,
 	.nav.nav-stacked {
 		> li {
-			padding-right:0;
-			&:before{
-				content: none;
-				display: none;
-		 	}
 			&.dropdown{
 				.dropdown-menu {
 					border: 0 !important;
