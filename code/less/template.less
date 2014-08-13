@@ -1503,12 +1503,17 @@ nav {
 .is_internet.v_8,
 .is_internet.v_9{
 	.content-wrapp{
-		display: table;
+		overflow: hidden;
 		> .row , > .row-fluid{
-			display: table-row;
+			display: block;
 
 			> [class*="span"]{
-				display: table-cell;
+				float: left;
+			}
+			#sidebar1,
+			#sidebar2{
+				margin-bottom: -3000px;
+				padding-bottom: 3000px;
 			}
 		}
 	}
