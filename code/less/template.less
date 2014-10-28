@@ -189,9 +189,7 @@ dl.article-info{
 	left: 0;
 	z-index: -1;
 }
-.wrapper-featured{
-	margin-bottom: 20px;
-}
+
 #featured{
 	margin-bottom: 0;
 	font-size:13px;
@@ -403,30 +401,26 @@ aside .uneditable-input{
 .moduletable_ms2,
 .module_ms2,
 .moduletext_ms2{
-	background-color: #CCCCCC;
+	background-color: @wellBackground;
 	color:#666666;
-}
-.moduletable_ms2,
-.module_ms2,
-.moduletext_ms2{
 	padding: 10px;
-	color: #ffffff;
-}
-.moduletable_ms2 a,
-.module_ms2 a,
-.moduletext_ms2 a{
-	color: white;
-	font-family: @altFontFamily;
-	-webkit-text-stroke-width: 0.5px;
-}
 
-.module_ms2 h3,
-.moduletext_ms2 h3,
-.moduletable_ms2 h3{
-	color:#FFFFFF;
-	.opacity(50);
-}
+	a{
+		color: white;
+		font-family: @altFontFamily;
+		-webkit-text-stroke-width: 0.5px;
 
+		&:hover,
+		&:focus{
+			.opacity(80)
+		}
+	}
+
+	h3{
+		color:#FFFFFF;
+		.opacity(50);
+	}
+}
 
 /************ Yellow **************/
 
@@ -454,10 +448,22 @@ aside .uneditable-input{
 .moduletable_ms2.blue{
 	background-color: #14B1D2;
 }
-.moduletable_ms2 a:hover,
-.module_ms2 a:hover,
-.moduletext_ms2 a:hover{
-	.opacity(80)
+
+.custom_ms2 i,
+.custom_ms2 h2{
+	float: left;
+	line-height: normal;
+	margin-bottom:0;
+	color: white;
+	padding:5px 0 0 5px;
+	text-transform:uppercase;
+	.opacity(50);
+}
+.custom_ms2 > i{
+	margin-right:10px;
+}
+.custom_ms2 > h2 + p{
+	clear: both;
 }
 /************************* ms3 **********************/
 .moduletable_ms3,
@@ -495,6 +501,7 @@ aside .uneditable-input{
 .moduletext_ms3.blue h3{
 	color:@blue;
 }
+
 .nav + *{
 	margin-top: 20px;
 }
@@ -548,7 +555,6 @@ aside .uneditable-input{
 	line-height: normal;
 }
 
-
 .search input[type="image"]{
 	background-image: none;
 	filter: none;
@@ -564,6 +570,7 @@ aside .uneditable-input{
 .clear{
 	clear: both;
 }
+
 #mod-search-searchword {
     border: 2px solid @color_three;
     border-radius: 0 0 0 0;
@@ -640,26 +647,9 @@ div.module div.moduletable div.custom ul.latestnews.nav li a {
 }
 /************************ styles of modules ****************************/
 
-.custom_ms2 i,
-.custom_ms2 h2{
-	float: left;
-	line-height: normal;
-	margin-bottom:0;
-	color: white;
-	padding:5px 0 0 5px;
-	text-transform:uppercase;
-	.opacity(50);
-}
-.custom_ms2 > i{
-	margin-right:10px;
-}
 .icon-large{
 	font-size: 2.1em;
 	line-height: 1.1em;
-}
-
-.custom_ms2 > h2 + p{
-	clear: both;
 }
 
 .items-row .page-header h2 a,
@@ -704,13 +694,19 @@ body footer > div.container,
 
 #sidebar1,
 #sidebar2{
-	padding: 0 10px;
-
-	.fixed-left {
-		margin-left: -10px;
+	.moduletable {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
-	.fixed-right {
+
+	.moduletable_ms2 {
+		margin-left: -10px;
 		margin-right: -10px;
+	}
+
+	.well {
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 }
 
@@ -726,9 +722,7 @@ body footer > div.container,
 			margin-right: 0;
 		}
 	}
-	.moduletable_ms2{
-		margin-right: -10px;
-	}
+
 	.moduletable_ms3{
 		margin-left: -20px;
 		margin-right: -10px;
@@ -744,9 +738,7 @@ body footer > div.container,
 			padding-right: 10px;
 		}
 	}
-	.moduletable_ms2{
-		margin-left: -10px;
-	}
+
 	.moduletable_ms3{
 		margin-left: -10px;
 		margin-right: -20px;
@@ -816,6 +808,12 @@ li{
 }
 #grid-top{
 	position: relative;
+
+	.module_ms2,
+	.moduletext_ms2,
+	.moduletable_ms2{
+		position: relative;
+	}
 }
 .grid-top{
 	padding: 10px 0;
@@ -899,6 +897,7 @@ li{
 /******** Other styles ***************/
 
 .well {
+	.box-shadow(none);
 	color: #666666;
 	.nav-list{
 		> .active{
