@@ -576,9 +576,70 @@ aside .uneditable-input{
     border-radius: 0 0 0 0;
     margin-bottom: 0;
 }
+
+// ----------------------------------------------------------------------------------
+
 .btn {
-	border-radius: 2px 2px 2px 2px !important;
+	border-radius: 2px 2px 2px 2px;
+	&:hover,
+	&:focus {
+		background-image: none;
+		background-color: darken(@btnBackground, 10%);
+	}
+
 }
+
+.btn-link {
+	&:hover,
+	&:focus {
+		background-color: transparent;
+	}
+}
+
+.btn-primary {
+	&:hover,
+	&:focus {
+		background-color: darken(@btnPrimaryBackground, 10%);
+	}
+}
+
+.btn-info {
+	&:hover,
+	&:focus {
+		background-color: darken(@btnInfoBackground, 10%);
+	}
+}
+
+.btn-success {
+	&:hover,
+	&:focus {
+		background-color: darken(@btnSuccessBackground, 10%);
+	}
+}
+
+.btn-warning {
+	&:hover,
+	&:focus {
+		background-color: darken(@btnWarningBackground, 10%);
+	}
+}
+
+.btn-danger {
+	&:hover,
+	&:focus {
+		background-color: darken(@btnDangerBackground, 10%);
+	}
+}
+
+.btn-inverse {
+	&:hover,
+	&:focus {
+		background-color: darken(@btnInverseBackground, 10%);
+	}
+}
+
+// ----------------------------------------------------------------------------------
+
 
 p::selection{
 		background-color: #E5E6E6;
@@ -905,11 +966,19 @@ li{
 			> a:hover ,
 			> a:focus {
 				color: @textColor;
+
+				[class^="icon-"],
+				[class*=" icon-"] {
+					color: @textColor;
+				}
 			}
 		}
 	}
+	.nav-header{
+		color: @textColor;
+		text-shadow: none;
+	}
 }
-
 
 .nav-header{
 	padding-left: 5px;
@@ -1070,6 +1139,9 @@ nav {
 	box-shadow:none;
 	padding-left: 0;
 	padding-right: 0;
+}
+#menu,
+#toolbar {
 	.nav {
 		margin: 0 auto;
 		left: auto;
@@ -1077,6 +1149,7 @@ nav {
 		display: table;
 	}
 }
+
 .navbar{
 	.brand{
 		margin-left: 0;
@@ -1090,6 +1163,11 @@ nav {
 			padding: 0 0 0 20px;
 			color: @navbarLinkColor;
 			position: relative;
+
+			> a {
+				padding: 10px 5px;
+			}
+
 			&:before{
 				background-color: @navbarLinkColor;
 				content: '';
@@ -1115,6 +1193,10 @@ nav {
 					display: none;
 				}
 			}
+		}
+
+		+ .navbar-search {
+			margin-top: 5px;
 		}
 	}
 	.navbar-form,
@@ -1148,6 +1230,19 @@ nav {
 		}
 	}
 }
+
+.dropdown-menu {
+	li a{
+		&:hover,
+		&:focus {
+			background-color: transparent;
+			background-image: none;
+			box-shadow: none;
+			text-shadow:0 0 0;
+		}
+	}
+}
+
 .nav,
 .navbar-inner,
 .nav .navbar-inner,
@@ -1159,13 +1254,12 @@ nav {
 		-webkit-text-stroke-width: 0.5px;
 		margin-bottom: 0;
 		> a {
-			padding: 10px 5px;
 			&:hover,
 			&:focus {
-				box-shadow: none;
 				background-color: transparent;
-				text-shadow:0 0 0, 0 0 0;
 				background-image: none;
+				box-shadow: none;
+				text-shadow:0 0 0, 0 0 0;
 			}
 		}
 		&.dropdown{
@@ -1350,6 +1444,25 @@ nav {
 				}
 				.caret {
 					border-top-color: @white;
+				}
+			}
+		}
+	}
+}
+
+.nav.nav-list {
+	> li {
+		> a {
+			[class^="icon-"],
+			[class*=" icon-"] {
+				color: @linkColor;
+			}
+
+			&:hover,
+			&:focus {
+				[class^="icon-"],
+				[class*=" icon-"] {
+					color: @linkColorHover;
 				}
 			}
 		}
