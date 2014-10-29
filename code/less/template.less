@@ -878,6 +878,20 @@ li{
 }
 .grid-top{
 	padding: 10px 0;
+	.row-fluid {
+		> * {
+			margin-bottom: 0;
+			> *:last-child {
+				margin-bottom: 0;
+				> *:last-child {
+					margin-bottom: 0;
+					> *:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
 }
 .border-wrapp{
 	position: absolute;
@@ -1544,6 +1558,23 @@ nav {
 			}
 		}
 	}
+	.tabbable {
+		.nav-tabs {
+			li > a {
+				&:hover,
+				&:focus {
+					color: @linkColorHover;
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: @linkColorHover;
+					}
+					.caret {
+						border-top-color: @linkColorHover;
+					}
+				}
+			}
+		}
+	}
 	.nav.nav-list,
 	.nav.nav-pills{
 		> li {
@@ -1613,6 +1644,20 @@ nav {
 						.caret {
 							border-top-color: @white;
 						}
+					}
+				}
+			}
+		}
+	}
+
+	.nav.nav-list {
+		>li {
+			> a  {
+				&:hover,
+				&:focus {
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: white;
 					}
 				}
 			}
