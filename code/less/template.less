@@ -762,9 +762,19 @@ body footer > div.container,
 	padding-right: 10px;
 }
 
-body > * {
-	position: relative;
-	z-index: 2;
+body > {
+	* {
+		position: relative;
+		z-index: 2;
+	}
+
+	.z3 {
+		z-index: 3;
+	}
+
+	.wrapper-toolbar {
+		z-index: 4;
+	}
 }
 
 .absolute {

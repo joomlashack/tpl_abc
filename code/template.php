@@ -30,7 +30,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('menu')) : ?>
         <!-- menu -->
-        <div class="menu-background">
+        <div class="menu-background z3">
             <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>"  name="menu" />
         </div>
         <?php endif; ?>
@@ -131,7 +131,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <!-- footer -->
 
-        <div class="wrapper-footer">
+        <div class="wrapper-footer z3">
             <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
                 <?php if ($this->countModules('bottom-menu')) : ?>
                 <!-- bottom-menu -->
