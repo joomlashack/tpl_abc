@@ -6,6 +6,16 @@
 	display: flex;
 }
 
+#menuWidth {
+	.core (@gridColumnWidth, @gridGutterWidth) {
+		.span (@columns) {
+		  width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+		}
+
+		.wrapper-menu { .span(@gridColumns); }
+	}
+}
+
 /************* Header *******************************************************/
 
 h1, h2, h3, h4, h5, h6 {
@@ -1168,9 +1178,18 @@ nav {
 	margin: 0;
 }
 
-.wrapper-menu,
+.menu-background,
 .wrapper-bottom-menu{
 	background-color: @navbarBackground;
+}
+
+.wrapper-menu {
+	.center-block();
+	width: 940px;
+
+	.container {
+		width: auto;
+	}
 }
 
 .navbar-inner {
@@ -1187,6 +1206,18 @@ nav {
 		left: auto;
 		float: none;
 		display: table;
+	}
+}
+
+#menu {
+	margin: 0;
+	.navbar-inner {
+		background-image: none;
+		background-color: transparent;
+	}
+
+	.navbar {
+		margin: 0;
 	}
 }
 
@@ -1246,22 +1277,16 @@ nav {
 	}
 }
 
-#menu{
-	.navbar-inner {
+.wrapper-menu{
+	border-left: 1px solid @color_three;
+	border-right:1px solid @color_three;
+	padding-left:10px;
+	padding-right: 10px;
+
+	.container {
 		border-bottom: 1px solid @color_three;
 		margin-left: -20px;
 		margin-right: -20px;
-	}
-}
-
-#bottom-menu{
-	.navbar-inner {
-		margin-left: -10px;
-		margin-right: -10px;
-		.nav-collapse {
-			border-left: 1px solid @color_three;
-			border-right: 1px solid @color_three;
-		}
 	}
 }
 

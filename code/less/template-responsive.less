@@ -1,5 +1,31 @@
+#menuWidth {
+	.core (@gridColumnWidth, @gridGutterWidth) {
+		.span (@columns) {
+		  width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+		}
+
+		.wrapper-menu { .span(@gridColumns); }
+	}
+}
+
+@media(min-width:1200px){
+	#menuWidth > .core(@gridColumnWidth1200, @gridGutterWidth1200);
+}
+
 /* Phones and tablets */
 @media (max-width: 979px){
+  	.wrapper-menu {
+  		width: auto;
+  		border: 0;
+  		padding: 0;
+
+  		.container {
+  			margin: 0;
+			width: auto;
+			padding: 0;
+  		}
+  	}
+
 	.custom_ms2 i,
 	.custom_ms2 h2{
 		font-size: 1.5em;
@@ -7,12 +33,6 @@
 
 	.navbar-inner {
 		margin: 0;
-	}
-
-	.wrapper-menu .container {
-		width: auto;
-		padding: 0;
-		border: 0;
 	}
 
 	.content-wrapp{
@@ -27,14 +47,16 @@
 	.navbar .nav .navbar-inner {
 		margin: 0 auto;
 		border: 0;
-			.nav-collapse {
-				border: 0;
-			}
-			.btn-navbar {
+		.nav-collapse {
+			border: 0;
+		}
+		.btn-navbar {
 			background-color: transparent;
 			background-image: none;
 			filter: none;
 			border: 0;
+			box-shadow: none;
+			margin-right: 20px;
 			.icon-bar {
 				width: 40px;
 			}
@@ -150,15 +172,10 @@
 /* Phones */
 @media(max-width:767px){
 
-	body > * > div.container {
-		border: 0;
-		padding: 0;
-	}
-
-	#menu, #bottom-menu{
-		.navbar-inner {
-			margin: 0;
-		}
+	.container.container-border,
+	body footer > div.container {
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 
 	#sidebar1, #sidebar2{
@@ -177,7 +194,14 @@
 	#header{
 		text-align: center;
 	}
-	.wrapper-menu,
+
+	.wrapper-menu {
+		width: auto;
+	}
+	.menu-background {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 	.wrapper-bottom-menu,
 	#header{
 		margin-left: -20px;
@@ -186,6 +210,7 @@
 			margin: 0 20px;
 		}
 	}
+
 	.module, .moduletable, .moduletext, #top > div {
 		padding: 0;
 	}

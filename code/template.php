@@ -30,7 +30,9 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('menu')) : ?>
         <!-- menu -->
-        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>"  name="menu" />
+        <div class="menu-background">
+            <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>"  name="menu" />
+        </div>
         <?php endif; ?>
 
         <header id="header">
