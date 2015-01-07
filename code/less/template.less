@@ -132,6 +132,7 @@ dl.article-info{
 }
 .wrapper-footer{
 	padding-top: 17px;
+	position: static;
 }
 
 .border-closure-ft{
@@ -740,6 +741,7 @@ h4 a{
 	box-shadow: none;
 	color: black;
 }
+
 body > * > div.container,
 body > div.container,
 body footer > div.container,
@@ -749,6 +751,29 @@ body footer > div.container,
 	padding-left:10px;
 	padding-right: 10px;
 }
+
+body > * {
+	position: relative;
+	z-index: 2;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.absolute-top {
+	top: 0;
+}
+
+.container.container-border {
+	z-index: 1;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	right: 0;
+	left: 0;
+}
+
 #main-content{
 	margin-bottom: 0;
 }

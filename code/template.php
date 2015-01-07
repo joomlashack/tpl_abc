@@ -56,6 +56,8 @@ defined('_JEXEC') or die('Restricted access');
         </div>
         <?php endif; ?>
 
+        <div class="<?php echo $containerClass ?> container-border absolute absolute-top">
+        </div>
         <div class="<?php echo $containerClass ?> top-space">
             <?php if ($this->countModules('grid-top')) : ?>
             <div id="grid-top">
