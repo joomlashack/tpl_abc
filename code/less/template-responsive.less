@@ -9,6 +9,12 @@
 		margin: 0;
 	}
 
+	.wrapper-menu .container {
+		width: auto;
+		padding: 0;
+		border: 0;
+	}
+
 	.content-wrapp{
 		margin-right: 0;
 		margin-left: 0;
@@ -73,12 +79,88 @@
 				margin: 0;
 			}
 		}
+
+		.nav-collapse {
+			border: 0;
+		}
+
+		.container{
+			padding: 0;
+		}
+
+		.navbar-inner {
+			border-bottom: 1px solid @color_three;
+		}
+	}
+
+	#menu {
+		margin: 0;
+		.navbar {
+			margin: 0;
+		}
+
+		.navbar-inner {
+			margin: 0;
+		}
+	}
+
+	#menu, #toolbar {
+		.nav > li > a {
+		    text-shadow: none;
+		    font-size: 16px;
+		    padding: 10px 30px;
+		}
+		.nav,
+		.navbar-inner,
+		.nav .navbar-inner,
+		.navbar .nav,
+		.navbar .nav .navbar-inner {
+			> li > a {
+				border: 0;
+			}
+
+			li.dropdown .dropdown-menu {
+				border: 0 !important;
+				li {
+					border: 0;
+				}
+				> li > a {
+					padding: 9px 15px;
+				}
+			}
+		}
+	}
+
+	.navbar .nav > li {
+		padding: 0;
+
+		&:before {
+			display: none;
+			content: none;
+		}
+	}
+
+	.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
+		font-weight: normal;
+		padding: 9px 15px;
 	}
 
 }
 
 /* Phones */
 @media(max-width:767px){
+
+	body > * > div.container {
+		border: 0;
+		padding: 0;
+	}
+
+	#menu, #bottom-menu{
+		.navbar-inner {
+			margin: 0;
+		}
+	}
+
 	#sidebar1, #sidebar2{
 		border: 0 none;
 
