@@ -35,9 +35,7 @@
 		margin: 0;
 	}
 
-	.navbar .nav {
-		margin: 0 auto;
-		border: 0;
+	.navbar {
 		.nav-collapse {
 			border: 0;
 		}
@@ -52,23 +50,27 @@
 				width: 40px;
 			}
 		}
-		li {
-			list-style: none;
-			> a {
-				border-bottom: 1px solid @dropdownBackground;
-				&:hover,
-				&:focus {
-					background-color: @dropdownBackground;
+		.nav {
+			margin: 0 auto;
+			border: 0;
+			li {
+				list-style: none;
+				> a {
+					border-bottom: 1px solid @dropdownBackground;
+					&:hover,
+					&:focus {
+						background-color: @dropdownBackground;
+					}
 				}
-			}
-			.dropdown-menu {
-				border: 0;
-				li {
+				.dropdown-menu {
 					border: 0;
-					> a {
-						&:hover,
-						&:focus {
-							background-color: @dropdownBackground;
+					li {
+						border: 0;
+						> a {
+							&:hover,
+							&:focus {
+								background-color: @dropdownBackground;
+							}
 						}
 					}
 				}
