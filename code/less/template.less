@@ -1183,6 +1183,20 @@ nav {
 	margin: 0;
 }
 
+.nav {
+	li {
+		> a {
+			.image-title {
+				margin-left: 4px;
+			}
+
+			[class^="icon-"], [class*=" icon-"] {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
 .menu-background,
 .wrapper-bottom-menu{
 	background-color: @navbarBackground;
