@@ -759,17 +759,17 @@ body footer > div.container,
 	padding-right: 10px;
 }
 
-body > {
-	* {
+body {
+	> * {
 		position: relative;
 		z-index: 2;
 	}
 
-	.z3 {
+	> .z3 {
 		z-index: 3;
 	}
 
-	.wrapper-toolbar {
+	> .wrapper-toolbar {
 		z-index: 4;
 	}
 }
@@ -1555,14 +1555,17 @@ nav {
 				.dropdown-menu {
 					border: 0 !important;
 					li {
+						border: 0;
+
 						a{
 							color: @textColor;
+
 							[class^="icon-"],
 							[class*=" icon-"] {
-								color: @textColor;
+								color: inherit;
 							}
 							.caret {
-								border-top-color: @textColor;
+								border-top-color: inherit;
 								border-left-color: transparent;
 							}
 							&:hover,
@@ -1570,10 +1573,10 @@ nav {
 								color: @linkColorHover;
 								[class^="icon-"],
 								[class*=" icon-"] {
-									color: @linkColorHover;
+									color: inherit;
 								}
 								.caret {
-									border-top-color: @linkColorHover;
+									border-top-color: inherit;
 									border-left-color: transparent;
 								}
 							}
@@ -1583,12 +1586,13 @@ nav {
 							> a:hover,
 							> a:focus {
 								color: @linkColorHover;
+
 								[class^="icon-"],
 								[class*=" icon-"] {
-									color: @linkColorHover;
+									color: inherit;
 								}
 								.caret {
-									border-top-color: @linkColorHover;
+									border-top-color: inherit;
 									border-left-color: transparent;
 								}
 							}
@@ -1596,26 +1600,44 @@ nav {
 					}
 				}
 			}
-			&.active {
-				> a {
-					color: @black;
-						[class^="icon-"],
+			> a {
+				&:hover, &:focus {
+					background-color: @grayLighter;
+					color: @linkColorHover;
+
+					[class^="icon-"],
 					[class*=" icon-"] {
-						color: @black;
+						color: inherit;
 					}
 					.caret {
-						border-top-color: @black;
+						border-top-color: inherit;
 					}
+				}
+			}
+			&.active {
+				> a {
+					background-color: @linkColor;
+					color: @white;
+
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: inherit;
+					}
+					.caret {
+						border-top-color: inherit;
+					}
+
 					&:hover,
 					&:focus{
-						background-color: transparent;
-						color: @black;
+						background-color: @linkColor;
+						color: @white;
+
 						[class^="icon-"],
 						[class*=" icon-"] {
-							color: @black;
+							color: inherit;
 						}
 						.caret {
-							border-top-color: @black;
+							border-top-color: inherit;
 						}
 					}
 				}
@@ -1634,6 +1656,32 @@ nav {
 					}
 					.caret {
 						border-top-color: @linkColorHover;
+					}
+				}
+			}
+			.active {
+				> a {
+					color: @black;
+
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: inherit;
+					}
+					.caret {
+						border-top-color: @black;
+					}
+
+					&:hover,
+					&:focus{
+						color: @black;
+
+						[class^="icon-"],
+						[class*=" icon-"] {
+							color: inherit;
+						}
+						.caret {
+							border-top-color: @black;
+						}
 					}
 				}
 			}
@@ -1721,7 +1769,42 @@ nav {
 				&:focus {
 					[class^="icon-"],
 					[class*=" icon-"] {
-						color: white;
+						color: inherit;
+					}
+				}
+			}
+		}
+	}
+}
+
+.well {
+	.nav,
+	.nav.nav-stacked {
+		> li {
+			> a {
+				color:  @black;
+
+				[class^="icon-"],
+				[class*=" icon-"] {
+					color: inherit;
+				}
+				.caret {
+					border-top-color: inherit;
+				}
+				&:hover, &:focus {
+					background-color: transparent;
+					color: @linkColorHover;
+				}
+			}
+			&.active {
+				> a {
+					background-color: @linkColor;
+					color: @white;
+
+					&:hover,
+					&:focus{
+						background-color: @linkColor;
+						color: @white;
 					}
 				}
 			}
