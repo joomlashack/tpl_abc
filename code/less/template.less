@@ -244,14 +244,6 @@ aside .uneditable-input{
 .module  ul.nav i{
 	color: #333;
 }
-.moduletable_ms1 ul.nav i,
-.moduletext_ms1 ul.nav i,
-.module_ms1 ul.nav i,
-.moduletable_ms2 ul.nav i,
-.moduletext_ms2 ul.nav i,
-.module_ms2 ul.nav i{
-	color: transparent;
-}
 
 .moduletable_ms1 ul.nav i[class^="icon-"] ,
 .moduletext_ms1 ul.nav i[class^="icon-"],
@@ -333,9 +325,10 @@ aside .uneditable-input{
 			color: #333;
 		}
 	}
-	.nav li>{
-		a:hover,
-		a:focus{
+	.nav > li{
+		> a:hover,
+		> a:focus{
+			background-color: transparent;
 			color: #333;
 			.caret {
 				border-top-color: #333;
