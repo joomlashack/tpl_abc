@@ -1,7 +1,7 @@
 {
   "excluded": [
     {
-      "table_name": "<l6hnq></l6hnq>_core_log_searches"
+      "table_name": "l6hnq_core_log_searches"
     },
     {
       "table_name": "l6hnq_finder_filters"
