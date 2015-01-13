@@ -205,6 +205,18 @@
     },
     {
       "table_name": "l6hnq_jsvisionary_slides"
+    },
+    {
+      "table_name": "l6hnq_core_log_searches"
+    },
+    {
+      "table_name": "l6hnq_postinstall_messages"
+    },
+    {
+      "table_name": "l6hnq_ucm_history"
+    },
+    {
+      "table_name": "l6hnq_user_keys"
     }
   ]
 }
