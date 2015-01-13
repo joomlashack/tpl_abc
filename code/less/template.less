@@ -254,7 +254,6 @@ aside .uneditable-input{
 }
 
 .moduletable_ms1 ul.nav i[class^="icon-"] ,
-.moduletext_ms1 ul.nav i[class^="icon-"],
 .module_ms1 ul.nav i[class^="icon-"],
 .moduletable_ms2 ul.nav i[class^="icon-"],
 .moduletext_ms2 ul.nav i[class^="icon-"],
@@ -537,30 +536,19 @@ aside .uneditable-input{
 }
 .tabbable {
 	.nav-tabs{
-	>li{
-		>a{
-			&:hover,
-			&:focus{
-				border-bottom-color: @grayLighter !important;
+		>li{
+			>a{
+				&:hover,
+				&:focus{
+					border-bottom-color: @grayLighter !important;
+				}
 			}
 		}
 	}
 }
-}
 
-#main #tabs h1 a,
-#main #tabs h2 a,
-#main #tabs h3 a,
-#main #tabs h4 a,
-#main #tabs h5 a,
-#main #tabs h6 a,
-#main .tabs h1 a,
-#main .tabs h2 a,
-#main .tabs h3 a,
-#main .tabs h4 a,
-#main .tabs h5 a,
-#main .tabs h6 a{
-	color: #DD0000;
+#main .tabs h3 a {
+	color: @color_two;
 	text-decoration:none;
 	margin-top: 10px;
 	line-height: normal;
