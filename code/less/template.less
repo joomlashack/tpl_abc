@@ -239,44 +239,10 @@ aside .uneditable-input{
 	margin-top: 10px;
 }
 
-.moduletable ul.nav i,
-.moduletext ul.nav i,
-.module  ul.nav i{
-	color: #333;
-}
-.moduletable_ms1 ul.nav i,
-.moduletext_ms1 ul.nav i,
-.module_ms1 ul.nav i,
-.moduletable_ms2 ul.nav i,
-.moduletext_ms2 ul.nav i,
-.module_ms2 ul.nav i{
-	color: transparent;
-}
-
-.moduletable_ms1 ul.nav i[class^="icon-"] ,
-.module_ms1 ul.nav i[class^="icon-"],
-.moduletable_ms2 ul.nav i[class^="icon-"],
-.moduletext_ms2 ul.nav i[class^="icon-"],
-.module_ms2 ul.nav i[class^="icon-"],
-.moduletable_ms1 ul.nav i[class*=" icon-"] ,
-.moduletext_ms1 ul.nav i[class*=" icon-"],
-.module_ms1 ul.nav i[class*=" icon-"],
-.moduletable_ms2 ul.nav i[class*=" icon-"],
-.moduletext_ms2 ul.nav i[class*=" icon-"],
-.module_ms2 ul.nav i[class*=" icon-"] {
-	color: inherit;
-}
-.moduletable_ms1 .nav > li > a:hover,
-.moduletext_ms1 .nav > li > a:hover,
-.module_ms1 .nav > li > a:hover,
-.moduletable_ms2 .nav > li > a:hover,
-.moduletext_ms2 .nav > li > a:hover,
-.module_ms2 .nav > li > a:hover{
-	background-color: transparent;
-}
 .nav > li a{
 	text-decoration: none;
 }
+
 #featured,
 #header{
 	[class*="module"]{
@@ -312,99 +278,6 @@ aside .uneditable-input{
 .module_ms2 i{
 	color: white;
 	.opacity(50);
-}
-/*********************** ms1 ******************************/
-.module_ms1,
-.moduletable_ms1,
-.moduletext_ms1{
-	padding:10px;
-	h1,h2,h4,h5,h6{
-		color: #333;
-	}
-	h3{
-		text-transform: uppercase;
-		padding: 0 20px;
-		color: #ffffff;
-	}
-	a{
-		&:hover,
-		&:focus{
-			color: #333;
-		}
-	}
-	.nav li>{
-		a:hover,
-		a:focus{
-			color: #333;
-			.caret {
-				border-top-color: #333;
-			}
-			[class^="icon-"],
-			[class*=" icon-"] {
-				color: #333;
-			}
-		}
-	}
-	&.blue{
-		a{
-			color: @blue;
-		}
-		h3{
-			background-color: #14B1D2;
-			color: #71D1E4;
-		}
-		.nav-pills > .active > a,
-		.nav-pills > .active > a:hover,
-		.nav-pills > .active > a:focus{
-			background-color: #71D1E4;
-			color: white;
-		}
-	}
-	&.red{
-		a{
-			color: #D03636;
-		}
-		h3{
-			background-color:#D03636;
-			color: #E58584;
-		}
-		.nav-pills > .active > a,
-		.nav-pills > .active > a:hover,
-		.nav-pills > .active > a:focus{
-			background-color: #E58584;
-			color: white;
-		}
-	}
-	&.yellow{
-		a{
-			color: #FFA801;
-		}
-		h3{
-			background-color:#FFA801;
-			color: #FECA66;
-		}
-		.nav-pills > .active > a,
-		.nav-pills > .active > a:hover,
-		.nav-pills > .active > a:focus{
-			background-color: #FECA66;
-			color: white;
-		}
-	}
-	&.green{
-		a{
-			color: #9EBC20;
-		}
-		h3{
-			background-color:#9EBC20;
-			color: #C5D874;
-		}
-		.nav-pills > .active > a,
-		.nav-pills > .active > a:hover,
-		.nav-pills > .active > a:focus{
-			background-color: #C5D874;
-			color: white;
-		}
-	}
 }
 
 /********************* ms2 ********************/
@@ -1799,6 +1672,132 @@ nav {
 		}
 	}
 }
+/*********************** ms1 ******************************/
+.module_ms1,
+.moduletable_ms1,
+.moduletext_ms1{
+	padding:10px;
+
+	h1,h2,h4,h5,h6{
+		color: #333;
+	}
+	h3{
+		text-transform: uppercase;
+		padding: 0 20px;
+		color: #ffffff;
+	}
+	a{
+		&:hover,
+		&:focus{
+			color: #333;
+		}
+	}
+	.nav > li {
+		> a:hover,
+		> a:focus{
+			color: #333;
+
+			.caret {
+				border-top-color: inherit;
+			}
+			[class^="icon-"],
+			[class*=" icon-"] {
+				color: inherit;
+			}
+		}
+	}
+	&.blue{
+		a{
+			color: @blue;
+		}
+		h3{
+			background-color: #14B1D2;
+			color: #71D1E4;
+		}
+		.nav-pills > .active > a,
+		.nav-pills > .active > a:hover,
+		.nav-pills > .active > a:focus{
+			background-color: #71D1E4;
+			color: white;
+		}
+	}
+	&.red{
+		a{
+			color: #D03636;
+		}
+		h3{
+			background-color:#D03636;
+			color: #E58584;
+		}
+		.nav-pills > .active > a,
+		.nav-pills > .active > a:hover,
+		.nav-pills > .active > a:focus{
+			background-color: #E58584;
+			color: white;
+		}
+	}
+	&.yellow{
+		a{
+			color: #FFA801;
+		}
+		h3{
+			background-color:#FFA801;
+			color: #FECA66;
+		}
+		.nav-pills > .active > a,
+		.nav-pills > .active > a:hover,
+		.nav-pills > .active > a:focus{
+			background-color: #FECA66;
+			color: white;
+		}
+	}
+	&.green{
+		a{
+			color: #9EBC20;
+		}
+		h3{
+			background-color:#9EBC20;
+			color: #C5D874;
+		}
+		.nav-pills > .active > a,
+		.nav-pills > .active > a:hover,
+		.nav-pills > .active > a:focus{
+			background-color: #C5D874;
+			color: white;
+		}
+	}
+}
+
+.module_ms2,
+.moduletable_ms2,
+.moduletext_ms2{
+	.nav > li {
+		> a:hover,
+		> a:focus{
+			color: @white;
+
+			.caret {
+				border-top-color: inherit;
+			}
+			[class^="icon-"],
+			[class*=" icon-"] {
+				color: inherit;
+			}
+		}
+	}
+}
+
+.moduletable_ms1,
+.moduletext_ms1,
+.module_ms1,
+.moduletable_ms2,
+.moduletext_ms2,
+.module_ms2{
+	.nav > li > a:hover {
+		background-color: transparent;
+	}
+}
+
 .navbar-inverse .nav li.dropdown .dropdown-menu li>a:hover .caret,
 .navbar-inverse .navbar-inner li.dropdown .dropdown-menu li>a:hover .caret {
 	border-bottom-color: transparent;
