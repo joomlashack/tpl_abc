@@ -953,39 +953,15 @@ p.img_caption{
 
 // Shackslides
 
-#sliderNav a.sliderPrev,
-#sliderNav a.sliderNext{
-	text-indent: -9999px;
-}
-#slider a.sliderNext {
-    background: url("../images/arrows.png") no-repeat scroll -30px center transparent !important;
-    color: transparent;
-    height: 100%;
-    top: 0;
-    margin-top: 0;
-    padding: 0;
-    width: 31px !important;
-}
-#slider a.sliderPrev {
-    background: url("../images/arrows.png") no-repeat scroll 0px center transparent !important;
-    color: transparent;
-    height: 100%;
-    width: 31px !important;
-    top: 0;
-    margin-top: 0;
-}
-
-#slider a {
-    text-indent: -9999px;
-}
-body .slidermanButtonsCont .sliderPrev,
-body .slidermanButtonsCont .sliderNext {
-    margin-top: 6%;
-}
-
-.slideTitle p {
-	font-family: @sansFontFamily;
-	font-size: 14px
+.jss-slider {
+	.jss-navigation .jss-navigation-buttons {
+		.owl-prev {
+			background-position: 0px !important;
+		}
+		.owl-next {
+			background-position: -30px !important;
+		}
+	}
 }
 
 // LifeStream
