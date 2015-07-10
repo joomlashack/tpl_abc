@@ -656,19 +656,6 @@ body {
 	margin-bottom: 0;
 }
 
-#sidebar1,
-#sidebar2{
-	.moduletable {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
-	.well {
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-}
-
 #sidebar1{
 	border-right:1px solid @color_three;
 
@@ -702,6 +689,7 @@ body {
 		padding: 20px 30px 20px 10px;
 	}
 }
+
 #sidebar1,
 #sidebar2{
 	-webkit-box-sizing: border-box;
@@ -709,10 +697,61 @@ body {
 	-ms-box-sizing:border-box;
 	-o-box-sizing:border-box;
 	box-sizing: border-box;
-	.moduletable_ms1{
-		padding: 0;
+
+	.moduletable {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
-	.moduletable_ms3{
+
+	.well {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.moduletext_ms1,
+	.moduletable_ms1 {
+		padding: 0;
+
+		> * {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		> .nav-list {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		&.well {
+			padding-left: 10px;
+			padding-right: 10px;
+
+			> * {
+				margin-left: -10px;
+				margin-right: -10px;
+			}
+
+			> .nav-list {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+
+		&.tabbable.tabs-left {
+			> ul {
+				padding-right: 0;
+			}
+		}
+
+		&.tabbable.tabs-right {
+			> ul {
+				padding-left: 0;
+			}
+		}
+	}
+
+	.moduletext_ms3,
+	.moduletable_ms3 {
 		+ .moduletable_ms3{
 			margin-top: -20px;
 		}
@@ -869,6 +908,7 @@ li{
 .well {
 	.box-shadow(none);
 	color: #666666;
+
 	.nav-list{
 		> .active{
 			> a,
@@ -1573,7 +1613,7 @@ nav {
 			}
 			&.active {
 				> a {
-					background-color: @linkColorHover;
+					background-color: @linkColor;
 					color: @white;
 					[class^="icon-"],
 					[class*=" icon-"] {
@@ -1584,7 +1624,7 @@ nav {
 					}
 					&:hover,
 					&:focus{
-						background-color: @linkColorHover;
+						background-color: @linkColor;
 						color: @white;
 						[class^="icon-"],
 						[class*=" icon-"] {
@@ -1614,40 +1654,6 @@ nav {
 	}
 }
 
-.well {
-	.nav,
-	.nav.nav-stacked {
-		> li {
-			> a {
-				color:  @black;
-
-				[class^="icon-"],
-				[class*=" icon-"] {
-					color: inherit;
-				}
-				.caret {
-					border-top-color: inherit;
-				}
-				&:hover, &:focus {
-					background-color: transparent;
-					color: @linkColorHover;
-				}
-			}
-			&.active {
-				> a {
-					background-color: @linkColor;
-					color: @white;
-
-					&:hover,
-					&:focus{
-						background-color: @linkColor;
-						color: @white;
-					}
-				}
-			}
-		}
-	}
-}
 /*********************** ms1 ******************************/
 .module_ms1,
 .moduletable_ms1,
@@ -1658,6 +1664,7 @@ nav {
 		color: #333;
 	}
 	h3{
+		background-color: @color_two;
 		text-transform: uppercase;
 		padding: 0 20px;
 		color: #ffffff;
@@ -1671,7 +1678,6 @@ nav {
 	.nav > li {
 		> a:hover,
 		> a:focus{
-			color: #333;
 
 			.caret {
 				border-top-color: inherit;
@@ -1682,7 +1688,7 @@ nav {
 			}
 		}
 	}
-	&.blue{
+	&.blue , &.blue.well {
 		a{
 			color: @blue;
 		}
@@ -1690,14 +1696,59 @@ nav {
 			background-color: #14B1D2;
 			color: #71D1E4;
 		}
+
+		.nav > li {
+			> a {
+				color: @blue;
+
+				.caret {
+						border-top-color: @blue;
+				}
+
+				[class^="icon-"],
+				[class*=" icon-"] {
+					color: @blue;
+				}
+
+				&:hover,
+				&:focus{
+					color: darken(#13B2D2 ,15%);
+
+					.caret {
+						border-top-color: darken(#13B2D2 ,15%);
+					}
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: darken(#13B2D2 ,15%);
+					}
+				}
+			}
+		}
+
+		.nav > li.active > a, .nav.nav-stacked > li.active > a {
+			background-color: #14B1D2;
+		}
+
+		.nav > .active > a,
+		.nav > .active > a:hover,
+		.nav > .active > a:focus
 		.nav-pills > .active > a,
 		.nav-pills > .active > a:hover,
-		.nav-pills > .active > a:focus{
-			background-color: #71D1E4;
+		.nav-pills > .active > a:focus {
+			background-color: #13B2D2;
 			color: white;
 		}
+
+		&.tabbable {
+			.nav > .active > a,
+			.nav > .active > a:hover,
+			.nav > .active > a:focus {
+				color: #13B2D2;
+			}
+
+		}
 	}
-	&.red{
+	&.red , &.red.well{
 		a{
 			color: #D03636;
 		}
@@ -1705,14 +1756,58 @@ nav {
 			background-color:#D03636;
 			color: #E58584;
 		}
+		.nav > li {
+			> a {
+				color: @red;
+
+				.caret {
+						border-top-color: @red;
+				}
+
+				[class^="icon-"],
+				[class*=" icon-"] {
+					color: @red;
+				}
+
+				&:hover,
+				&:focus{
+					color: darken(#D03636 ,15%);
+
+					.caret {
+						border-top-color: darken(#D03636 ,15%);
+					}
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: darken(#D03636 ,15%);
+					}
+				}
+			}
+		}
+
+		.nav > li.active > a, .nav.nav-stacked > li.active > a {
+			background-color: #D03636;
+		}
+
+		.nav > .active > a,
+		.nav > .active > a:hover,
+		.nav > .active > a:focus
 		.nav-pills > .active > a,
 		.nav-pills > .active > a:hover,
-		.nav-pills > .active > a:focus{
-			background-color: #E58584;
+		.nav-pills > .active > a:focus {
+			background-color: #D03636;
 			color: white;
 		}
+
+		&.tabbable {
+			.nav > .active > a,
+			.nav > .active > a:hover,
+			.nav > .active > a:focus {
+				color: #D03636;
+			}
+
+		}
 	}
-	&.yellow{
+	&.yellow , &.yellow.well {
 		a{
 			color: #FFA801;
 		}
@@ -1720,14 +1815,68 @@ nav {
 			background-color:#FFA801;
 			color: #FECA66;
 		}
+
+		.nav > li {
+			> a {
+				color: @yellow;
+
+				.caret {
+						border-top-color: @yellow;
+				}
+
+				[class^="icon-"],
+				[class*=" icon-"] {
+					color: @yellow;
+				}
+
+				&:hover,
+				&:focus{
+					color: darken(#FFA801 ,15%);
+
+					.caret {
+						border-top-color: darken(#FFA801 ,15%);
+					}
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: darken(#FFA801 ,15%);
+					}
+				}
+			}
+		}
+
+		.nav > li.active > a, .nav.nav-stacked > li.active > a {
+			background-color: #FFA801;
+		}
+
+		.nav > .active > a,
+		.nav > .active > a:hover,
+		.nav > .active > a:focus
 		.nav-pills > .active > a,
 		.nav-pills > .active > a:hover,
-		.nav-pills > .active > a:focus{
+		.nav-pills > .active > a:focus {
 			background-color: #FECA66;
 			color: white;
 		}
+
+		&.tabbable {
+			.nav > .active > a,
+			.nav > .active > a:hover,
+			.nav > .active > a:focus {
+				color: #FFA801;
+			}
+
+		}
+
+		&.tabbable {
+			.nav > .active > a,
+			.nav > .active > a:hover,
+			.nav > .active > a:focus {
+				color: #FFA801;
+			}
+
+		}
 	}
-	&.green{
+	&.green , &.green.well {
 		a{
 			color: #9EBC20;
 		}
@@ -1735,11 +1884,56 @@ nav {
 			background-color:#9EBC20;
 			color: #C5D874;
 		}
+
+		.nav > li {
+			> a {
+				color: @green;
+
+				.caret {
+						border-top-color: @green;
+				}
+
+				[class^="icon-"],
+				[class*=" icon-"] {
+					color: @green;
+				}
+
+				&:hover,
+				&:focus{
+					color: darken(#9EBC20 ,15%);
+
+					.caret {
+						border-top-color: darken(#9EBC20 ,15%);
+					}
+					[class^="icon-"],
+					[class*=" icon-"] {
+						color: darken(#9EBC20 ,15%);
+					}
+				}
+			}
+		}
+
+		.nav > li.active > a, .nav.nav-stacked > li.active > a {
+			background-color: #9EBC20;
+		}
+
+		.nav > .active > a,
+		.nav > .active > a:hover,
+		.nav > .active > a:focus
 		.nav-pills > .active > a,
 		.nav-pills > .active > a:hover,
-		.nav-pills > .active > a:focus{
-			background-color: #C5D874;
+		.nav-pills > .active > a:focus {
+			background-color: #9EBC20;
 			color: white;
+		}
+
+		&.tabbable {
+			.nav > .active > a,
+			.nav > .active > a:hover,
+			.nav > .active > a:focus {
+				color: #9EBC20;
+			}
+
 		}
 	}
 }
