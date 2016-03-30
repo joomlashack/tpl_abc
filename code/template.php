@@ -25,19 +25,19 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('toolbar')) : ?>
         <!-- toolbar -->
-        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
+        <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
         <?php endif; ?>
 
         <?php if ($this->countModules('menu')) : ?>
         <!-- menu -->
-        <div class="menu-background z3">
-            <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>"  name="menu" />
+        <div class="menu-background">
+            <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode;?>"  name="menu" />
         </div>
         <?php endif; ?>
 
         <header id="header">
-            <div class="<?php echo $containerClass ?>">
-                <div class="<?php echo $gridMode; ?> clearfix">
+            <div class="<?php echo $wrightContainerClass ?>">
+                <div class="<?php echo $wrightGridMode; ?> clearfix">
                     <div class="span1"></div>
                     <div class="span10">
                         <div class="row-fluid">
@@ -52,15 +52,15 @@ defined('_JEXEC') or die('Restricted access');
         <?php if ($this->countModules('featured')) : ?>
         <div class="wrapper-container-featured">
             <div class="featured-background"></div>
-            <div id="featured" class="<?php echo $containerClass ?> top-space ">
+            <div id="featured" class="<?php echo $wrightContainerClass ?> top-space ">
                 <w:module type="row-fluid" name="featured" chrome="wrightflexgrid" />
            </div>
         </div>
         <?php endif; ?>
 
-        <div class="<?php echo $containerClass ?> container-border absolute absolute-top">
+        <div class="<?php echo $wrightContainerClass ?> container-border absolute absolute-top">
         </div>
-        <div class="<?php echo $containerClass ?> top-space">
+        <div class="<?php echo $wrightContainerClass ?> top-space">
             <?php if ($this->countModules('grid-top')) : ?>
             <div id="grid-top">
                 <div class="border-wrapp">
@@ -131,13 +131,13 @@ defined('_JEXEC') or die('Restricted access');
 
         <!-- footer -->
 
-        <div class="wrapper-footer z3">
+        <div class="wrapper-footer">
             <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
                 <?php if ($this->countModules('bottom-menu')) : ?>
                 <!-- bottom-menu -->
-                <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
+                <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode;?>" name="bottom-menu" />
                 <?php endif; ?>
-                <div class="<?php echo $containerClass ?>">
+                <div class="<?php echo $wrightContainerClass ?>">
                     <div class="border-closure-ft">
                         <div class="footer-content">
                             <?php if ($this->countModules('footer')) : ?>
