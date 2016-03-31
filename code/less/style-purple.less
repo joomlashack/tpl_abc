@@ -8,12 +8,13 @@
 	background-image: url('../images/arrow-purple.png');
 }
 
-.pager a, .pager span{
+.pager > li > a, .pager > li > span{
 	background-color: @color_two;
 	color: @heroUnitHeadingColor;
-}
-.pager a:hover,.pager span:hover{
-	background-color: @color_five;
+
+	&:hover, &:focus {
+		background-color: @color_five;
+	}
 }
 
 .module {
