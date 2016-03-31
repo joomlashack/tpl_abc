@@ -21,22 +21,32 @@ defined('_JEXEC') or die('Restricted access');
         <w:head />
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand">
     </head>
-    <body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass?>"<?php endif; ?>>
+    <body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass?> body"<?php endif; ?>>
 
-        <?php if ($this->countModules('toolbar')) : ?>
+        <?php
+			if ($this->countModules('toolbar'))
+			:
+		?>
         <!-- toolbar -->
-        <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
-        <?php endif; ?>
+        <w:nav containerClass="<?php echo $wrightContainerClass; ?>" rowClass="<?php echo $wrightGridMode; ?>" wrapClass="navbar-fixed-top" type="toolbar" name="toolbar" />
+        <?php
+			endif;
+		?>
 
-        <?php if ($this->countModules('menu')) : ?>
+        <?php
+			if ($this->countModules('menu'))
+			:
+		?>
         <!-- menu -->
         <div class="menu-background">
-            <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode;?>"  name="menu" />
+            <w:nav containerClass="<?php echo $wrightContainerClass; ?>" rowClass="<?php echo $wrightGridMode; ?>"  name="menu" />
         </div>
-        <?php endif; ?>
+        <?php
+			endif;
+		?>
 
         <header id="header">
-            <div class="<?php echo $wrightContainerClass ?>">
+            <div class="<?php echo $wrightContainerClass; ?>">
                 <div class="<?php echo $wrightGridMode; ?> clearfix">
                     <div class="span1"></div>
                     <div class="span10">
@@ -49,19 +59,25 @@ defined('_JEXEC') or die('Restricted access');
             </div>
         </header>
 
-        <?php if ($this->countModules('featured')) : ?>
+        <?php
+			if ($this->countModules('featured'))
+			:
+		?>
         <div class="wrapper-container-featured">
             <div class="featured-background"></div>
-            <div id="featured" class="<?php echo $wrightContainerClass ?> top-space ">
+            <div id="featured" class="<?php echo $wrightContainerClass; ?> top-space ">
                 <w:module type="row-fluid" name="featured" chrome="wrightflexgrid" />
            </div>
         </div>
-        <?php endif; ?>
+        <?php
+			endif;
+		?>
 
-        <div class="<?php echo $wrightContainerClass ?> container-border absolute absolute-top">
-        </div>
-        <div class="<?php echo $wrightContainerClass ?> top-space">
-            <?php if ($this->countModules('grid-top')) : ?>
+        <div class="<?php echo $wrightContainerClass ?> container-border top-space">
+            <?php
+				if ($this->countModules('grid-top'))
+				:
+			?>
             <div id="grid-top">
                 <div class="border-wrapp">
                     <div class="border-wrapp-relative">
@@ -72,14 +88,21 @@ defined('_JEXEC') or die('Restricted access');
                     <w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
                 </div>
             </div>
-            <?php endif; ?>
+            <?php
+				endif;
+			?>
 
-            <?php if ($this->countModules('grid-top2')) : ?>
+            <?php
+				if ($this->countModules('grid-top2'))
+				:
+			?>
             <!-- grid-top2 -->
             <div id="grid-top2">
                 <w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
             </div>
-            <?php endif; ?>
+            <?php
+				endif;
+			?>
 
             <div class="content-wrapp">
                 <div id="main-content" class="row-fluid">
@@ -89,26 +112,41 @@ defined('_JEXEC') or die('Restricted access');
                     </aside>
                     <!-- main -->
                     <section id="main">
-                        <?php if ($this->countModules('above-content')) : ?>
+                        <?php
+							if ($this->countModules('above-content'))
+							:
+						?>
                         <!-- above-content -->
                         <div id="above-content">
                             <w:module type="none" name="above-content" chrome="xhtml" />
                         </div>
-                        <?php endif; ?>
-                        <?php if ($this->countModules('breadcrumbs')) : ?>
+                        <?php
+							endif;
+						?>
+                        <?php
+							if ($this->countModules('breadcrumbs'))
+							:
+						?>
                         <!-- breadcrumbs -->
                         <div id="breadcrumbs">
                             <w:module type="single" name="breadcrumbs" chrome="none" />
                         </div>
-                        <?php endif; ?>
+                        <?php
+							endif;
+						?>
                         <!-- component -->
                         <w:content />
-                        <?php if ($this->countModules('below-content')) : ?>
+                        <?php
+							if ($this->countModules('below-content'))
+							:
+						?>
                         <!-- below-content -->
                         <div id="below-content">
                             <w:module type="none" name="below-content" chrome="xhtml" />
                         </div>
-                        <?php endif; ?>
+                        <?php
+							endif;
+						?>
                     </section>
                     <!-- sidebar2 -->
                     <aside id="sidebar2">
@@ -116,40 +154,59 @@ defined('_JEXEC') or die('Restricted access');
                     </aside>
                 </div>
             </div>
-            <?php if ($this->countModules('grid-bottom')) : ?>
+            <?php
+				if ($this->countModules('grid-bottom'))
+				:
+			?>
             <div id="grid-bottom" >
                 <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
             </div>
-            <?php endif; ?>
-            <?php if ($this->countModules('grid-bottom2')) : ?>
+            <?php
+				endif;
+			?>
+            <?php
+				if ($this->countModules('grid-bottom2'))
+				:
+			?>
             <div id="grid-bottom2" >
                 <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
             </div>
-            <?php endif; ?>
-
+            <?php
+				endif;
+			?>
         </div>
 
         <!-- footer -->
 
         <div class="wrapper-footer">
             <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
-                <?php if ($this->countModules('bottom-menu')) : ?>
+                <?php
+					if ($this->countModules('bottom-menu'))
+					:
+				?>
                 <!-- bottom-menu -->
                 <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode;?>" name="bottom-menu" />
-                <?php endif; ?>
+                <?php
+					endif;
+				?>
                 <div class="<?php echo $wrightContainerClass ?>">
                     <div class="border-closure-ft">
                         <div class="footer-content">
-                            <?php if ($this->countModules('footer')) : ?>
+                            <?php
+								if ($this->countModules('footer'))
+								:
+							?>
                              <w:module type="none" name="footer" chrome="xhtml" />
-                            <?php endif; ?>
+                            <?php
+								endif;
+							?>
                             <w:footer />
                         </div>
                     </div>
                  </div>
             </footer>
         </div>
-
+		<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_abc/js/abc.js'></script>
         <?php
             $browser = JBrowser::getInstance();
 
