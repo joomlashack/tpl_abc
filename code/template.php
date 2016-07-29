@@ -108,7 +108,7 @@ defined('_JEXEC') or die('Restricted access');
                 <div id="main-content" class="row-fluid">
                     <!-- sidebar1 -->
                     <aside id="sidebar1">
-                        <w:module name="sidebar1" chrome="xhtml" />
+                        <w:module name="sidebar1" chrome="wrightxhtml" />
                     </aside>
                     <!-- main -->
                     <section id="main">
@@ -118,7 +118,7 @@ defined('_JEXEC') or die('Restricted access');
 						?>
                         <!-- above-content -->
                         <div id="above-content">
-                            <w:module type="none" name="above-content" chrome="xhtml" />
+                            <w:module type="none" name="above-content" chrome="wrighixhtml" />
                         </div>
                         <?php
 							endif;
@@ -142,7 +142,7 @@ defined('_JEXEC') or die('Restricted access');
 						?>
                         <!-- below-content -->
                         <div id="below-content">
-                            <w:module type="none" name="below-content" chrome="xhtml" />
+                            <w:module type="none" name="below-content" chrome="wrightxhtml" />
                         </div>
                         <?php
 							endif;
@@ -150,7 +150,7 @@ defined('_JEXEC') or die('Restricted access');
                     </section>
                     <!-- sidebar2 -->
                     <aside id="sidebar2">
-                        <w:module name="sidebar2" chrome="xhtml" />
+                        <w:module name="sidebar2" chrome="wrightxhtml" />
                     </aside>
                 </div>
             </div>
@@ -196,7 +196,7 @@ defined('_JEXEC') or die('Restricted access');
 								if ($this->countModules('footer'))
 								:
 							?>
-                             <w:module type="none" name="footer" chrome="xhtml" />
+                             <w:module type="none" name="footer" chrome="wrightxhtml" />
                             <?php
 								endif;
 							?>
