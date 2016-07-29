@@ -18,17 +18,17 @@ jQuery(document).ready(function($) {
 
 		if (bodyHeight > (containersTotalHeight + mainHeight)) {
 			mainHeight = bodyHeight - containersTotalHeight;
-			jQuery(".container-border").height(mainHeight - 27);
+			jQuery(".container-border").height(mainHeight - 10);
 		}
 	}
 
 	mainSetHeight();
 
-    jQuery(window).resize(function() {
+	jQuery(window).resize(function() {
 		mainSetHeight();
 
-        if (jQuery(window).width() 	< 769) {
+		if (jQuery(window).width() 	< 769) {
 			jQuery(".container-border").css('height', 'auto');
 		}
-    });
+  });
 });
