@@ -206,7 +206,8 @@ defined('_JEXEC') or die('Restricted access');
                  </div>
             </footer>
         </div>
-		<script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_abc/js/abc.js'></script>
+        <w:module type="none" name="debug" chrome="none" />
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_abc/js/abc.js'></script>
         <?php
             $browser = JBrowser::getInstance();
 
