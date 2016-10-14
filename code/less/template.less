@@ -1,6 +1,10 @@
 @import "/../wright/build/libraries/bootstrap/less/utilities";
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600');
 
+p {
+	margin: 0 0 20px;
+}
+
 .flexbox-content(){
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
 	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -619,10 +623,6 @@ p::-moz-selection{
 		.border-radius(50px);
 		.box-shadow(none);
 		background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0 !important;
-	}
-
-	+ .container.top-space {
-		margin-bottom: 20px;
 	}
 }
 #top .moduletable,#top2 .moduletable{
@@ -2020,10 +2020,21 @@ nav {
 	.clearfix();
 }
 
+[class*="module"] {
+
+	.page-header {
+		border: none;
+	}
+}
+
 [class*="newsflash-horiz"] {
 	.page-header {
 		border: 0;
 	}
+}
+
+.bottom-space {
+	margin-bottom: 20px;
 }
 
 .light-bg {
@@ -2032,4 +2043,11 @@ nav {
 
 .lighter-bg {
 	background: #fff;
+}
+
+.overlay-content {
+	left: 60px;
+	max-width: 42%;
+	position: absolute;
+	top: 60px;
 }

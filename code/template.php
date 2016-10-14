@@ -73,7 +73,7 @@ defined('_JEXEC') or die('Restricted access');
 			endif;
 		?>
 
-        <div class="<?php echo $wrightContainerClass ?> lighter-bg top-space">
+        <div class="<?php echo $wrightContainerClass ?> lighter-bg top-space bottom-space">
             <div class="main-area">
 
                 <?php
