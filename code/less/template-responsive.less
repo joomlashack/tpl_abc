@@ -12,6 +12,24 @@
 	#menuWidth > .core(@gridColumnWidth1200, @gridGutterWidth1200);
 }
 
+@media (min-width: 980px) {
+
+	.dropdown-menu {
+		padding: 5px 0 !important;
+
+		&> li > a {
+			padding-left: 15px;
+		}
+	}
+
+	#header {
+
+		#mod-search-searchword {
+			max-width: 140px;
+		}
+	}
+}
+
 /* Phones and tablets */
 @media (max-width: 979px){
   	.wrapper-menu {
