@@ -28,10 +28,54 @@
 			max-width: 140px;
 		}
 	}
+
+	#top,
+	#top2 {
+
+		&> div{
+			padding: 22px 0 10px;
+		}
+	}
 }
 
 /* Phones and tablets */
 @media (max-width: 979px){
+
+	#logo img {
+		max-width: 250px;
+		margin: 20px auto;
+	}
+
+	#header {
+
+		.pull-right {
+			float: none;
+		}
+
+		form {
+			width: 50%;
+			margin: 0 auto;
+
+			#mod-search-searchword {
+				width: 90%;
+				text-align: center;
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+
+		#easy-social-icons ul.jssocialicons {
+			margin: 0 auto;
+
+			li {
+				float: none;
+				display: inline;
+			}
+		}
+	}
+
   	.wrapper-menu {
   		width: auto;
   		border: 0;
