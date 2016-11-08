@@ -14,9 +14,13 @@
 // You can use true/false for add gradient
 // -------------------------
 
-@dropdownLinkGradient : true;
-@navbarInverseDropdownLinkGradient : true;
+@dropdownLinkGradient : false;
+@navbarInverseDropdownLinkGradient : false;
 
+@navbarInnerGradient : false;
+@navbarInverseInnerGradient : false;
+
+@buttonGradient: false;
 
 // Dropdown For navbar-inverse
 // -------------------------
@@ -75,7 +79,7 @@
 // Scaffolding
 // -------------------------
 @bodyBackground:        @color_one;
-@textColor:             @gray + #111;
+@textColor:             #444;
 
 
 // Links
@@ -86,16 +90,15 @@
 
 // Typography
 // -------------------------
-@sansFontFamily:        Arial, sans-serif;
+@sansFontFamily:        'Source Sans Pro', sans-serif;
 @serifFontFamily:       "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @baseFontSize:          14px;
 @baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        20px;
-@altFontFamily:         "Quicksand", Arial, sans-serif;
 
-@headingsFontFamily:    @altFontFamily;
+@headingsFontFamily:    @sansFontFamily;
 @headingsFontWeight:    normal;    // instead of browser default, bold
 @headingsColor:         @grayDarker; // empty to use BS default, @textColor
 
@@ -126,9 +129,9 @@
 
 // Buttons
 // -------------------------
-@btnBackground:                     #ccc;
-@btnBackgroundHighlight:            darken(#ccc, 10%);
-@btnBorder:                         #ccc;
+@btnBackground:                     @gray;
+@btnBackgroundHighlight:            darken(@gray, 10%);
+@btnBorder:                         @gray;
 
 @btnPrimaryBackground:              @linkColor;
 @btnPrimaryBackgroundHighlight:     @linkColor;
