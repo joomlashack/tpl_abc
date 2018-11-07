@@ -680,7 +680,6 @@ h4 a{
 .readmore a{
 	font-family: @sansFontFamily;
 	border:0 none;
-	box-shadow: none;
 }
 
 p.readmore {
@@ -2095,4 +2094,143 @@ nav {
 	max-width: 42%;
 	position: absolute;
 	top: 60px;
+}
+
+/*********************** OSCampus ******************************/
+
+.base-btn() {
+	.buttonBackgroundNotGradient(@btnBackground, @btnBackgroundHighlight, @grayDark, 0 1px 1px rgba(255,255,255,.75));
+	.border-radius(2px);
+	text-shadow: none;
+	color: @white;
+	background-image: none;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+
+	&:active,
+	&:hover,
+	&:focus {
+		background-color: darken(@btnBackground, 10%);
+		color: @white;
+	}
+
+	i {
+
+		&:before {
+			color: @white;
+		}
+	}
+}
+
+.primary-btn() {
+	.buttonBackgroundNotGradient(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+	.border-radius(2px);
+	text-shadow: none;
+	color: @white;
+	background-image: none;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+
+	&:active,
+	&:hover,
+	&:focus {
+		background-color: darken(@btnPrimaryBackground, 10%);
+	}
+}
+
+.osc-module-container {
+
+	.osc-search-toggle {
+		color: @linkColor;
+	}
+
+	a,
+	button {
+
+		.osc-btn {
+			.base-btn();
+		}
+	}
+}
+
+#oscampus {
+
+	&.osc-container {
+
+		p,
+		div {
+			color: @textColor;
+			font-size: @baseFontSize;
+			line-height: @baseLineHeight;
+		}
+
+		a.osc-btn,
+		button.osc-btn,
+		.osc-pagination-list a,
+		.osc-pagination-list span {
+			.base-btn();
+		}
+
+		a.osc-btn-main,
+		button.osc-btn-main {
+			.primary-btn();
+		}
+
+		a {
+			color: @linkColor;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: @linkColorHover;
+			}
+		}
+
+		h2 {
+
+		}
+
+		.osc-row-one,
+		.osc-row-two {
+
+			a {
+				color: @linkColor;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: @linkColorHover;
+				}
+			}
+		}
+
+		#content-description {
+
+			p {
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.osc-lesson-links,
+		.osc-lesson-title {
+
+		}
+
+		.osc-lesson-title {
+
+		}
+
+		.page-header {
+
+
+			h1 {
+
+			}
+		}
+	}
 }
