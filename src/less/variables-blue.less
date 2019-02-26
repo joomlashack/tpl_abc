@@ -169,9 +169,9 @@
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
 
-@dropdownLinkColor:             #D2EAF6;
+@dropdownLinkColor:             lighten(desaturate(spin(@color_two, 9.9476), 16.7394), 44.5098) ;
 @dropdownLinkColorHover:        @white;
-@dropdownLinkColorActive:       #D2EAF6;
+@dropdownLinkColorActive:       lighten(desaturate(spin(@color_two, 9.9476), 16.7394), 44.5098) ;
 
 @dropdownLinkBackgroundActive:  @dropdownBackground;
 @dropdownLinkBackgroundHover:   @dropdownBackground;
@@ -226,8 +226,8 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    40px;
-@navbarBackgroundHighlight:       @blue;
-@navbarBackground:                @blue;
+@navbarBackgroundHighlight:       @color_two;
+@navbarBackground:                @color_two;
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
 @navbarText:                      @heroUnitHeadingColor;
@@ -244,10 +244,10 @@
 @navbarInverseBackgroundHighlight:       @color_one;
 @navbarInverseBorder:                    @color_one;
 
-@navbarInverseText:                      @blue;
-@navbarInverseLinkColor:                 @blue;
-@navbarInverseLinkColorHover:            @blue;
-@navbarInverseLinkColorActive:           @blue;
+@navbarInverseText:                      @color_two;
+@navbarInverseLinkColor:                 @color_two;
+@navbarInverseLinkColorHover:            @color_two;
+@navbarInverseLinkColorActive:           @color_two;
 @navbarInverseLinkBackgroundHover:       @color_three;
 @navbarInverseLinkBackgroundActive:      @color_one;
 
@@ -288,7 +288,7 @@
 @successBorder:           darken(spin(@successBackground, -10), 5%);
 
 @infoText:                #3a87ad;
-@infoBackground:          #D2EAF6;
+@infoBackground:          lighten(desaturate(spin(@color_two, 9.9476), 16.7394), 44.5098) ;
 @infoBorder:              darken(spin(@infoBackground, -10), 7%);
 
 
