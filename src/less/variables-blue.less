@@ -41,8 +41,8 @@
 @color_one  :@white;   // body background
 @color_two  :@blue;     // header Background
 @color_three:#999;     // BorderABC
-@color_four :#0F8EA8;  // Dropdown menu Background
-@color_five :#71D1E3;  // Footer Background
+@color_four :darken(saturate(spin(@color_two, 0.1437), 0.2004), 9.0196);  // Dropdown menu Background
+@color_five :lighten(desaturate(spin(@color_two, -0.5787), 16.3473), 21.7647);  // Footer Background
 
 //
 // Variables
@@ -269,7 +269,7 @@
 // Hero unit
 // -------------------------
 @heroUnitBackground:              darken(@color_two, 3%);
-@heroUnitHeadingColor:            #71D1E4;
+@heroUnitHeadingColor:            lighten(desaturate(spin(@color_two, -0.1393), 15.3588), 21.9608);
 @heroUnitLeadColor:               @white;
 
 
