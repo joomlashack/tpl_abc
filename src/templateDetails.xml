@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="3.9" type="template" method="upgrade" client="site">
 	<name>js_abc</name>
-	<creationDate>September 18 2019</creationDate>
+	<creationDate>January 23 2020</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>https://www.joomlashack.com</authorUrl>
-	<copyright>Copyright Joomlashack 2005-2019. All rights reserved</copyright>
+	<copyright>Copyright Joomlashack 2005-2020. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>2.2.11</version>
-    <description>TPL_JS_ABC_XML_DESCRIPTION</description>
+	<version>2.2.12</version>
+	<description>TPL_JS_ABC_XML_DESCRIPTION</description>
 
 	<languages folder="language">
 		<!-- en-GB -->
